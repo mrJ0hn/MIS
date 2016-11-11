@@ -17,9 +17,9 @@ namespace MIS
     /// <summary>
     /// Логика взаимодействия для AddClient.xaml
     /// </summary>
-    public partial class AddClient : Window
+    public partial class AddClientWindow : Window
     {
-        public AddClient()
+        public AddClientWindow()
         {
             InitializeComponent();
         }

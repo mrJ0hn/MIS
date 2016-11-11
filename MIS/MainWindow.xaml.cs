@@ -24,5 +24,10 @@ namespace MIS
         {
             InitializeComponent();
         }
+
+        private void btnNewVisitor_Click(object sender, RoutedEventArgs e)
+        {
+            new AddClientWindow().Show();
+        }
     }
 }
