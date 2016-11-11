@@ -61,6 +61,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавить пациента.
+        /// </summary>
+        public static string ButtonAddClient {
+            get {
+                return ResourceManager.GetString("ButtonAddClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пациент.
         /// </summary>
         public static string ButtonPatient {

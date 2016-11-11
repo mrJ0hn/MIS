@@ -7,18 +7,20 @@
         xmlns:res="clr-namespace:MIS.Properties"
         mc:Ignorable="d"
         WindowState="Maximized"
-        Title="MainWindow">
+        Title="MainWindow" Height="605.527" Width="1188.77">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Background="#015c65"/>
+
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="#015c65" BorderThickness="0,0,1,0">
             <StackPanel 
                     Background="#e4ebec">
@@ -64,5 +66,93 @@
                 </Button>
             </StackPanel>
         </Border>
+
+        <Grid Grid.Column="1" Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="55"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontFamily" Value="BodoniNovaNr"/>
+                    <Setter Property="FontSize" Value="18"/>
+                    <Setter Property="Foreground" Value="#015c65"/>
+                    <Setter Property="HorizontalAlignment" Value="Left"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                </Style>
+            </Grid.Resources>
+
+            <Border Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="#015c65" BorderThickness="0,0,0,1">
+                <StackPanel VerticalAlignment="Center">
+                    <StackPanel.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="FontFamily" Value="Myriad Pro"/>
+                            <Setter Property="FontSize" Value="22"/>
+                            <Setter Property="Foreground" Value="#015c65"/>
+                        </Style>
+                    </StackPanel.Resources>
+                    <Label Content="Расписание"/>
+                </StackPanel>
+            </Border>
+
+            <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0,15,0" Orientation="Vertical">
+                <Border BorderBrush="#015c65" BorderThickness="0,0,0,1">
+                    <Label Content="Сотрудники"/>
+                </Border>
+                <ListView Margin="0,5"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1" Grid.Row="1">
+                <Border  BorderBrush="#015c65" BorderThickness="0,0,0,1">
+                    <Label Content="Расписание на неделю"/>
+                </Border>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="60" />
+                        <ColumnDefinition Width="200" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.Resources>
+                        <Style TargetType="Label">
+                            <Setter Property="FontSize" Value="15"/>
+                            <Setter Property="Margin" Value="0,15,0,0"/>
+                            <Setter Property="HorizontalAlignment" Value="Right"/>
+                            <Setter Property="FontFamily" Value="Myriad Pro"/>
+                            <Setter Property="Foreground" Value="#015c65"/>
+                        </Style>
+                    </Grid.Resources>
+
+                    <Label Grid.Column="0" Grid.Row="0" Content="Дата"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Врач"/>
+                    <Label Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2"/>
+
+                    <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="0,15,0,0">
+                        <DatePicker Focusable="False" />
+                    </StackPanel>
+
+                    <Button Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Height="90" Width="140" HorizontalAlignment="Right" Margin="0,0,10,0" Background="White" BorderBrush="White" >
+                        <StackPanel>
+                            <Image Source="Pictures/AddClient.png" Height="55"/>
+                            <Label Content="{x:Static res:Resources.ButtonAddClient}" Margin="0"/>
+                        </StackPanel>
+                    </Button>
+
+                </Grid>
+            </StackPanel>
+        </Grid>
+
     </Grid>
 </Window>
