@@ -55,6 +55,7 @@
                 <Style TargetType="{x:Type DataGridRow}">
                     <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
                     <Setter Property="BorderThickness" Value="0"/>
+                    <Setter Property="FontFamily" Value="Myriad Pro"/>
                     <!--<EventSetter Event="MouseDoubleClick" Handler="gridRow_DoubleClick"/>-->
                 </Style>
                 <Style TargetType="Label">
@@ -66,6 +67,7 @@
                     <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0"/>
                     <Setter Property="FontSize" Value="14"/>
                     <Setter Property="FontWeight" Value="Bold"/>
+                    <Setter Property="FontFamily" Value="Myriad Pro"/>
                 </Style>
             </Grid.Resources>
             <Grid.RowDefinitions>
