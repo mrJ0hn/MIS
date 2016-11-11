@@ -10,7 +10,7 @@
         Title="MainWindow" Height="605.527" Width="1188.77">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="60"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -67,7 +67,7 @@
             </StackPanel>
         </Border>
 
-        <Grid Grid.Column="1" Grid.Row="1">
+        <Grid Grid.Column="1" Grid.Row="1" Margin="0,0,0,5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="55"/>
                 <RowDefinition Height="*"/>
@@ -101,12 +101,16 @@
                 </StackPanel>
             </Border>
 
-            <StackPanel Grid.Column="0" Grid.Row="1" Margin="0,0,15,0" Orientation="Vertical">
-                <Border BorderBrush="#015c65" BorderThickness="0,0,0,1">
+            <Grid Grid.Column="0" Grid.Row="1" Margin="0,0,15,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Border Grid.Row="0" BorderBrush="#015c65" BorderThickness="0,0,0,1">
                     <Label Content="Сотрудники"/>
                 </Border>
-                <ListView Margin="0,5"/>
-            </StackPanel>
+                <ListView Grid.Row="1" Margin="5,5,0,0" VerticalAlignment="Stretch"/>
+            </Grid>
 
             <Grid Grid.Column="1" Grid.Row="1">
                 <Grid.RowDefinitions>
@@ -148,7 +152,7 @@
                         <DatePicker Focusable="False" />
                     </StackPanel>
 
-                    <Button Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Height="90" Width="140" HorizontalAlignment="Right" Margin="0,0,10,0" Background="White" BorderBrush="White" >
+                    <Button Grid.Column="2" Grid.Row="0" Grid.RowSpan="2" Height="90" Width="140" HorizontalAlignment="Right" Margin="0,10,10,0" Background="White" BorderBrush="White" >
                         <StackPanel>
                             <Image Source="Pictures/AddClient.png" Height="55"/>
                             <Label Content="{x:Static res:Resources.ButtonAddClient}" Margin="0"/>
@@ -157,7 +161,7 @@
 
                 </Grid>
 
-                <local:CustomCalendar Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,0,0"/>
+                <local:CustomCalendar Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,10,0"/>
             </Grid>
         </Grid>
 

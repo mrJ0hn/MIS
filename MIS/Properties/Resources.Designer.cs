@@ -61,7 +61,7 @@ namespace MIS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Добавить пациента.
+        ///   Ищет локализованную строку, похожую на Новый клиент.
         /// </summary>
         public static string ButtonAddClient {
             get {

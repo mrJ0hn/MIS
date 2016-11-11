@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MIS"
              mc:Ignorable="d">
-    <ScrollViewer   HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden" 
+    <ScrollViewer   HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" 
                     PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
         <Grid>
             <Grid.Resources>
@@ -37,9 +37,9 @@
                     <Setter Property="VerticalAlignment" Value="Stretch"/>
                     <Setter Property="AutoGenerateColumns" Value="False"/>
                     <Setter Property="IsReadOnly" Value="True"/>
-                    <Setter Property="Background" Value="#FFF2F2F2"/>
-                    <Setter Property="BorderBrush" Value="#FF70AD47"/>
-                    <Setter Property="BorderThickness" Value="0.5,0,0.5,0"/>
+                    <Setter Property="Background" Value="#E0F2F1"/>
+                    <Setter Property="BorderBrush" Value="#015c65"/>
+                    <Setter Property="BorderThickness" Value="0.5,0,0.5,0.5"/>
                 </Style>
                 <Style TargetType="{x:Type DataGridColumnHeader}">
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -58,12 +58,12 @@
                     <!--<EventSetter Event="MouseDoubleClick" Handler="gridRow_DoubleClick"/>-->
                 </Style>
                 <Style TargetType="Label">
-                    <Setter Property="Background" Value="#FFD9D9D9"/>
+                    <Setter Property="Background" Value="#80CBC4"/>
                     <Setter Property="Height" Value="30"/>
                     <Setter Property="HorizontalAlignment" Value="Stretch"/>
                     <Setter Property="HorizontalContentAlignment" Value="Center"/>
-                    <Setter Property="BorderBrush" Value="#FF70AD47"/>
-                    <Setter Property="BorderThickness" Value="0.5,0,0.5,0"/>
+                    <Setter Property="BorderBrush" Value="#015c65"/>
+                    <Setter Property="BorderThickness" Value="0.5,0.5,0.5,0"/>
                     <Setter Property="FontSize" Value="14"/>
                     <Setter Property="FontWeight" Value="Bold"/>
                 </Style>
@@ -73,12 +73,12 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="200"/>
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0" Grid.Row="0" Name="txtMondey"/>
