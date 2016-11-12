@@ -61,6 +61,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Добавить.
+        /// </summary>
+        public static string ButtonAdd {
+            get {
+                return ResourceManager.GetString("ButtonAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Новый клиент.
         /// </summary>
         public static string ButtonAddClient {
@@ -84,6 +93,15 @@ namespace MIS.Properties {
         public static string ButtonSchedule {
             get {
                 return ResourceManager.GetString("ButtonSchedule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Поиск.
+        /// </summary>
+        public static string ButtonSearche {
+            get {
+                return ResourceManager.GetString("ButtonSearche", resourceCulture);
             }
         }
         
