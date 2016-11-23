@@ -138,4 +138,16 @@
   <data name="ButtonStatistics" xml:space="preserve">
     <value>Статистика</value>
   </data>
+  <data name="LabelDate" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="LabelDoctor" xml:space="preserve">
+    <value>Врач</value>
+  </data>
+  <data name="LabelShedule" xml:space="preserve">
+    <value>Расписание на неделю</value>
+  </data>
+  <data name="LabelWorker" xml:space="preserve">
+    <value>Сотрудники</value>
+  </data>
 </root>

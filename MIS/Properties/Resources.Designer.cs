@@ -122,5 +122,41 @@ namespace MIS.Properties {
                 return ResourceManager.GetString("ButtonStatistics", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Дата.
+        /// </summary>
+        public static string LabelDate {
+            get {
+                return ResourceManager.GetString("LabelDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Врач.
+        /// </summary>
+        public static string LabelDoctor {
+            get {
+                return ResourceManager.GetString("LabelDoctor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Расписание на неделю.
+        /// </summary>
+        public static string LabelShedule {
+            get {
+                return ResourceManager.GetString("LabelShedule", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Сотрудники.
+        /// </summary>
+        public static string LabelWorker {
+            get {
+                return ResourceManager.GetString("LabelWorker", resourceCulture);
+            }
+        }
     }
 }
