@@ -132,6 +132,9 @@
   <data name="ButtonAddClient" xml:space="preserve">
     <value>Новый клиент</value>
   </data>
+  <data name="ButtonControl" xml:space="preserve">
+    <value>Управление</value>
+  </data>
   <data name="ButtonPatient" xml:space="preserve">
     <value>Пациент</value>
   </data>

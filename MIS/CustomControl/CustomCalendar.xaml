@@ -53,7 +53,7 @@
                     </Style.Triggers>
                 </Style>
                 <Style TargetType="{x:Type DataGridRow}">
-                    <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
+                    <!--<Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />-->
                     <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="FontFamily" Value="Myriad Pro"/>
                     <!--<EventSetter Event="MouseDoubleClick" Handler="gridRow_DoubleClick"/>-->

@@ -25,5 +25,20 @@ namespace MIS
             InitializeComponent();
         }
 
+        private void btnSchedule_Click(object sender, RoutedEventArgs e)
+        {
+            SetPageInMainFrame(new Pages.SchedulePage());
+        }
+
+        private void btnControl_Click(object sender, RoutedEventArgs e)
+        {
+            SetPageInMainFrame(new Pages.ControlPage());
+        }
+
+        private void SetPageInMainFrame(Page page)
+        {
+            frameMain.NavigationService.Navigate(page);
+            frameMain.NavigationService.RemoveBackEntry();
+        }
     }
 }

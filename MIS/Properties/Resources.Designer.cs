@@ -106,6 +106,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Управление.
+        /// </summary>
+        public static string ButtonControl {
+            get {
+                return ResourceManager.GetString("ButtonControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Пациент.
         /// </summary>
         public static string ButtonPatient {

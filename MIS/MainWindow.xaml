@@ -23,7 +23,7 @@
 
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="#015c65" BorderThickness="0,0,1,0">
             <StackPanel Background="#e4ebec">
-                <Button Style="{StaticResource LeftButtons}" >
+                <Button x:Name="btnSchedule" Style="{StaticResource LeftButtons}" Click="btnSchedule_Click" >
                     <StackPanel>
                         <Image Style="{StaticResource Image}" Source="Pictures/Schedule.png"/>
                         <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonSchedule}"/>
@@ -41,6 +41,12 @@
                         <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonStatistics}"/>
                     </StackPanel>
                 </Button>
+                <Button x:Name="btnControl" Style="{StaticResource LeftButtons}" Click="btnControl_Click">
+                    <StackPanel>
+                        <Image Style="{StaticResource Image}" Source="Pictures/Settings.png"/>
+                        <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonControl}"/>
+                    </StackPanel>
+                </Button>
                 <Button Style="{StaticResource LeftButtons}">
                     <StackPanel>
                         <Image Style="{StaticResource Image}" Source="Pictures/Settings.png"/>
@@ -50,6 +56,6 @@
             </StackPanel>
         </Border>
 
-        <Frame Grid.Column="1" Grid.Row="1" Source="Pages/SchedulePage.xaml"/>
+        <Frame x:Name="frameMain" Grid.Column="1" Grid.Row="1" Source="Pages/SchedulePage.xaml"/>
     </Grid>
 </Window>
