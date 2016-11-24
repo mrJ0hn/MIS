@@ -13,9 +13,6 @@
             <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.Resources>
-            
-        </Grid.Resources>
         <ListBox x:Name="listTests" Grid.Column="0" HorizontalContentAlignment="Stretch" 
                  ScrollViewer.VerticalScrollBarVisibility="Hidden">
             <!--Почитай про лист бокс-->
@@ -39,5 +36,6 @@
             <ListBoxItem>Управление врачами</ListBoxItem>
             <ListBoxItem>Управление врачами</ListBoxItem>
         </ListBox>
+        <Frame x:Name="frameControl" Grid.Column="1" Source="../../Pages/SpecializationPage.xaml"/>
     </Grid>
 </Page>

@@ -1,15 +1,14 @@
-﻿<Window x:Class="MIS.AddSpecialization"
-        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:MIS"
-        mc:Ignorable="d"
-        Title="AddSpecialization" Height="561.2" Width="433">
-    <StackPanel>
-        <Label Content="Новая специализация" Foreground="White" FontSize="15"  FontWeight="Bold"
-               VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
-               Background="#015c65" Height="40"/>
+﻿<Page x:Class="MIS.Pages.SpecializationPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:MIS.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="500"
+      Title="SpecializationPage">
+
+    <StackPanel Background="White">
         <Grid Margin="5">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -62,4 +61,4 @@
             <Button Grid.Column="1" Grid.Row="2" Content="Добавить"/>
         </Grid>
     </StackPanel>
-</Window>
+</Page>

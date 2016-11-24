@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MIS
+namespace MIS.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для AddSpecialization.xaml
+    /// Логика взаимодействия для SpecializationPage.xaml
     /// </summary>
-    public partial class AddSpecialization : Window
+    public partial class SpecializationPage : Page
     {
-        public AddSpecialization()
+        public SpecializationPage()
         {
             InitializeComponent();
         }

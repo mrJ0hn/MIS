@@ -52,9 +52,6 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddSpecialization.xaml.cs">
-      <DependentUpon>AddSpecialization.xaml</DependentUpon>
-    </Compile>
     <Compile Include="ControlDoctors.xaml.cs">
       <DependentUpon>ControlDoctors.xaml</DependentUpon>
     </Compile>
@@ -67,14 +64,13 @@
     <Compile Include="Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\SpecializationPage.xaml.cs">
+      <DependentUpon>SpecializationPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="СlientСardWindow.xaml.cs">
       <DependentUpon>СlientСardWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AddClientWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="AddSpecialization.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -109,6 +105,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SchedulePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\SpecializationPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
