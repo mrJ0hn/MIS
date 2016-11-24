@@ -1,0 +1,140 @@
+﻿<Window x:Class="MIS.СlientСardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MIS"
+        xmlns:res="clr-namespace:MIS.Properties"
+        mc:Ignorable="d"
+        Title="СlientСard" Height="731.4" Width="1353.2" Background="White"         
+        WindowStartupLocation="CenterScreen"
+        WindowState="Maximized">
+    <DockPanel>
+        <Label Height="40" Background="#015c65" DockPanel.Dock="Top"/>
+        <Grid Background="#015c65">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Border Padding="10" Grid.Column="0" Background="White" Margin="0,0,2.5,0" CornerRadius="3">
+                <StackPanel  Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Doctor}"/>
+                        <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.LabekSpecailization}"/>
+                        <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.Group}"/>
+                        <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.LabelPrice}"/>
+                        <DataGrid Name="Price" Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Height="250" Style="{StaticResource DataGrid}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{x:Static res:Resources.Group}" Width="*"/>
+                                <DataGridTextColumn Header="{x:Static res:Resources.Service}" Width="*"/>
+                                <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+                        <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.ProvideService}" Style="{StaticResource LabelLine}"/>
+                        <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.Row="6" Grid.ColumnSpan="2" Height="150" Style="{StaticResource DataGrid}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="{x:Static res:Resources.Group}" Width="*"/>
+                                <DataGridTextColumn Header="{x:Static res:Resources.Service}" Width="*"/>
+                                <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
+                            </DataGrid.Columns>
+                        </DataGrid>
+                        <Label Grid.Column="0" Grid.Row="7" Content="{x:Static res:Resources.Cost}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="8" Content="{x:Static res:Resources.Discount}" Style="{StaticResource LabelLine}"/>
+
+                        <TextBox Grid.Column="1" Grid.Row="7" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="8" Style="{StaticResource TextBox}"/>
+                        <ComboBox Grid.Column="1" Grid.Row="0"  Style="{StaticResource ComboBox}"/>
+                        <ComboBox Grid.Column="1" Grid.Row="1" Style="{StaticResource ComboBox}"/>
+                        <ComboBox Grid.Column="1" Grid.Row="2" Style="{StaticResource ComboBox}"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Padding="10" Grid.Column="1" Background="White" Margin="2.5,0,0,0" CornerRadius="3">
+                <StackPanel Orientation="Vertical">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="1*"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Pol}" Style="{StaticResource LabelLine}"/>
+                        <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                            <RadioButton Margin="10" Style="{StaticResource RadioBtn}"/>
+                            <Label Content="{x:Static res:Resources.Male}" Style="{StaticResource LabelLine}"/>
+                            <RadioButton Margin="10" Style="{StaticResource RadioBtn}"/>
+                            <Label Content="{x:Static res:Resources.Female}" Style="{StaticResource LabelLine}"/>
+                        </StackPanel>
+                        <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.Birthday}" Style="{StaticResource LabelLine}"/>
+                        <StackPanel Grid.Column="1" Grid.Row="4" Orientation="Horizontal" Margin="0,10">
+                            <TextBox Width="70" Style="{StaticResource TextBox}"/>
+                            <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
+                            <TextBox Width="100" Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+                        <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.Phone}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="6" Content="{x:Static res:Resources.Passport}" Style="{StaticResource LabelLine}"/>
+                        <StackPanel Grid.Column="1" Grid.Row="6" Orientation="Horizontal" Grid.ColumnSpan="2" Margin="0,10">
+                            <Label  Content="{x:Static res:Resources.Seria}" Style="{StaticResource LabelLine}"/>
+                            <TextBox Width="80" Style="{StaticResource TextBox}"/>
+                            <Label  Content="{x:Static res:Resources.Namber}" Style="{StaticResource LabelLine}"/>
+                            <TextBox Width="140" Style="{StaticResource TextBox}"/>
+                        </StackPanel>
+                        <Label Grid.Column="0" Grid.Row="7" Content="{x:Static res:Resources.IssuedBy}"  Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="8" Content="{x:Static res:Resources.WhenIssued}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="9" Content="{x:Static res:Resources.AddressPropisre}" Style="{StaticResource LabelLine}"/>
+                        <Label Grid.Column="0" Grid.Row="10" Content="{x:Static res:Resources.AddressProgevania}" Style="{StaticResource LabelLine}"/>
+
+                        <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="5" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="7" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="8" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="9" Style="{StaticResource TextBox}"/>
+                        <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource TextBox}"/>
+                    </Grid>
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="11">
+                        <Button Content="{x:Static res:Resources.Print}" Style="{StaticResource Button}"/>
+                        <Button Content="{x:Static res:Resources.Save}" Style="{StaticResource Button}"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -17,9 +17,9 @@ namespace MIS
     /// <summary>
     /// Логика взаимодействия для СlientСard.xaml
     /// </summary>
-    public partial class СlientСardPage : Window
+    public partial class СlientСardWindow : Window
     {
-        public СlientСardPage()
+        public СlientСardWindow()
         {
             InitializeComponent();
         }

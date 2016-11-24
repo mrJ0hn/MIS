@@ -13,6 +13,14 @@
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Foreground" Value="#015c65"/>
     </Style>
+    <Style x:Key="LabelLine" TargetType="Label" >
+        <Setter Property="FontFamily" Value="BodoniNovaNr"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Foreground" Value="#015c65"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="Margin" Value="3"/>
+    </Style>
     <Style x:Key="Image" TargetType="Image">
         <Setter Property="Height" Value="60"/>
     </Style>
@@ -28,12 +36,41 @@
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
     </Style>
-    <!--<SolidColorBrush x:Key="BorderColor" Color="Aqua"/>-->
+    <Style x:Key="ComboBox" TargetType="ComboBox">
+        <Setter Property="FontFamily" Value="BodoniNovaNr"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="3"/>
+    </Style>
     <Style x:Key="BtnAddClient" TargetType="Button">
         <Setter Property="Width" Value="140"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="Margin" Value="0,10,10,0"/>
         <Setter Property="Background" Value="White"/>
         <Setter Property="BorderBrush" Value="White"/>
+    </Style>
+    <Style x:Key="TextBox" TargetType="TextBox">
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="BorderBrush" Value="#015c65"/>
+        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="Margin" Value="7"/>
+    </Style>
+    <Style x:Key="Button" TargetType="Button">
+        <Setter Property="Background" Value="#e4ebec"/>
+        <Setter Property="BorderBrush" Value="#015c65"/>
+        <Setter Property="Margin" Value="6"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
+        <Setter Property="Width" Value="75"/>
+        <Setter Property="FontFamily" Value="BodoniNovaNr"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Foreground" Value="#015c65"/>
+    </Style>
+    <Style x:Key="DataGrid" TargetType="DataGrid">
+        <Setter Property="BorderBrush" Value="#015c65"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+    </Style>
+    <Style x:Key="RadioBtn" TargetType="RadioButton">
+        <Setter Property="BorderBrush" Value="#015c65"/>
     </Style>
 </ResourceDictionary>
