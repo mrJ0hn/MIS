@@ -159,6 +159,9 @@
   <data name="Doctor" xml:space="preserve">
     <value>Лечащий врач</value>
   </data>
+  <data name="DoctorsControl" xml:space="preserve">
+    <value>Сотрудники</value>
+  </data>
   <data name="Female" xml:space="preserve">
     <value>Женский</value>
   </data>
@@ -221,6 +224,9 @@
   </data>
   <data name="Service" xml:space="preserve">
     <value>Услуга</value>
+  </data>
+  <data name="SpecializationControl" xml:space="preserve">
+    <value>Специзации</value>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Фамилия</value>

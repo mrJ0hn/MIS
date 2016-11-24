@@ -52,29 +52,25 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ControlDoctors.xaml.cs">
-      <DependentUpon>ControlDoctors.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\ControlPage.xaml.cs">
       <DependentUpon>ControlPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\DoctorsControlPage.xaml.cs">
+      <DependentUpon>DoctorsControlPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SpecializationPage.xaml.cs">
-      <DependentUpon>SpecializationPage.xaml</DependentUpon>
+    <Compile Include="Pages\SpecializationControlPage.xaml.cs">
+      <DependentUpon>SpecializationControlPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="СlientСardWindow.xaml.cs">
       <DependentUpon>СlientСardWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AddClientWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ControlDoctors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -104,11 +100,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\DoctorsControlPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\SchedulePage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\SpecializationPage.xaml">
+    <Page Include="Pages\SpecializationControlPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

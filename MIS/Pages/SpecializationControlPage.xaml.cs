@@ -18,9 +18,9 @@ namespace MIS.Pages
     /// <summary>
     /// Логика взаимодействия для SpecializationPage.xaml
     /// </summary>
-    public partial class SpecializationPage : Page
+    public partial class SpecializationControlPage : Page
     {
-        public SpecializationPage()
+        public SpecializationControlPage()
         {
             InitializeComponent();
         }

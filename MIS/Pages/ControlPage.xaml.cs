@@ -24,5 +24,27 @@ namespace MIS.Pages
         {
             InitializeComponent();
         }
+
+        private void listTests_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ListBox list = sender as ListBox;
+            ListBoxItem selectedItem = (ListBoxItem)list.SelectedItem;
+            if (selectedItem != null)
+            {
+                if (selectedItem.Name == itemSpecializationControl.Name)
+                {
+                    SetPageInFrame(new SpecializationControlPage());
+                }
+                else if (selectedItem.Name == itemDoctorsControl.Name)
+                {
+                    SetPageInFrame(new DoctorsControlPage());
+                }
+            }
+        }
+        private void SetPageInFrame(Page page)
+        {
+            frameControl.NavigationService.Navigate(page);
+            frameControl.NavigationService.RemoveBackEntry();
+        }
     }
 }

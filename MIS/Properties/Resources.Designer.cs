@@ -187,6 +187,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Сотрудники.
+        /// </summary>
+        public static string DoctorsControl {
+            get {
+                return ResourceManager.GetString("DoctorsControl", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Женский.
         /// </summary>
         public static string Female {
@@ -372,6 +381,15 @@ namespace MIS.Properties {
         public static string Service {
             get {
                 return ResourceManager.GetString("Service", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Специзации.
+        /// </summary>
+        public static string SpecializationControl {
+            get {
+                return ResourceManager.GetString("SpecializationControl", resourceCulture);
             }
         }
         
