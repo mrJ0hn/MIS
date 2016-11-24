@@ -75,12 +75,12 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
-                <ColumnDefinition Width="200"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
             <Label Grid.Column="0" Grid.Row="0" Name="txtMondey"/>
@@ -105,7 +105,7 @@
             <DataGrid Name="gridWenesday" Grid.Column="2" Grid.Row="1">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Время" Width="50" Binding="{Binding Date, StringFormat=\{0:H:mm\}}"/>
-                    <DataGridTextColumn Header="ФИО"  Width="*" Binding="{Binding FullName}"/>
+                    <DataGridTextColumn Header="ФИО" Width="*" Binding="{Binding FullName}"/>
                 </DataGrid.Columns>
             </DataGrid>
             <DataGrid Name="gridThursday" Grid.Column="3" Grid.Row="1" Background="White">

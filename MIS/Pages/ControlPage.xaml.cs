@@ -13,17 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MIS
+namespace MIS.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для ControlPage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class ControlPage : Page
     {
-        public MainWindow()
+        public ControlPage()
         {
             InitializeComponent();
         }
-
     }
 }

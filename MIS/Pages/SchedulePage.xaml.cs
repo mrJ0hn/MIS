@@ -13,17 +13,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace MIS
+namespace MIS.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для SchedulePage.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class SchedulePage : Page
     {
-        public MainWindow()
+        public SchedulePage()
         {
             InitializeComponent();
         }
-
+        private void btnNewVisitor_Click(object sender, RoutedEventArgs e)
+        {
+            new AddClientWindow().Show();
+        }
     }
 }
