@@ -43,6 +43,10 @@ namespace MIS.Pages
                 {
                     SetPageInFrame(new AddGroup());
                 }
+                else if (selectedItem.Name == itemBlackListControl.Name)
+                {
+                    SetPageInFrame(new BlackListControl());
+                }
             }
         }
         private void SetPageInFrame(Page page)

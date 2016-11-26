@@ -88,6 +88,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Черный список.
+        /// </summary>
+        public static string BlackList {
+            get {
+                return ResourceManager.GetString("BlackList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Добавить.
         /// </summary>
         public static string ButtonAdd {

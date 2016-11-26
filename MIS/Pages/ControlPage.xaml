@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-        xmlns:res="clr-namespace:MIS.Properties"
+      xmlns:res="clr-namespace:MIS.Properties"
       xmlns:local="clr-namespace:MIS.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="500" d:DesignWidth="700"
@@ -37,7 +37,7 @@
             <ListBoxItem x:Name="itemSpecializationControl" Content="{x:Static res:Resources.SpecializationControl}"/>
             <ListBoxItem x:Name="itemGroupsControl" Content="{x:Static res:Resources.Groups}"/>
             <ListBoxItem x:Name="itemDoctorsControl" Content="{x:Static res:Resources.DoctorsControl}"/>
-            <ListBoxItem>Управление врачами</ListBoxItem>
+            <ListBoxItem x:Name="itemBlackListControl" Content="{x:Static res:Resources.BlackList}"/>
             <ListBoxItem>Управление врачами</ListBoxItem>
         </ListBox>
         <Frame x:Name="frameControl" Grid.Column="1"/>
