@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MIS"
+        xmlns:res="clr-namespace:MIS.Properties"
         mc:Ignorable="d"
         Title="AddClient" Height="600" Width="700"
          WindowStartupLocation="CenterScreen">
@@ -16,7 +17,7 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
-        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Новый пациент" FontSize="15"  FontWeight="Bold"
+        <Label Grid.Row="0" Grid.ColumnSpan="2" Content="Новый пациент" Foreground="White" FontSize="15"  FontWeight="Bold"
                VerticalContentAlignment="Center" HorizontalAlignment="Stretch" HorizontalContentAlignment="Center"
                Background="#015c65" Height="40"/>
         <StackPanel Orientation="Vertical" Grid.Column="1" Grid.Row="1">
@@ -37,60 +38,29 @@
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
 
-                <Grid.Resources>
-                    <Style TargetType="Label">
-                        <Setter Property="FontFamily" Value="BodoniNovaNr"/>
-                        <Setter Property="FontSize" Value="15"/>
-                        <Setter Property="Foreground" Value="#015c65"/>
-                        <Setter Property="VerticalAlignment" Value="Center"/>
-                        <Setter Property="HorizontalAlignment" Value="Left"/>
-                    </Style>
+                <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.LabelDate}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.Time}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.LabelDoctor}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="6" Content="Комментарий" Style="{StaticResource LabelLine}"/>
 
-                    <Style TargetType="TextBox">
-                        <Setter Property="VerticalContentAlignment" Value="Center"/>
-                        <Setter Property="BorderBrush" Value="#015c65"/>
-                        <Setter Property="Margin" Value="0,7,0,7"/>
-                        <Setter Property="FontSize" Value="15"/>
-                    </Style>
-
-                </Grid.Resources>
-
-                <Label Grid.Column="0" Grid.Row="0" Content="Фамилия"/>
-                <Label Grid.Column="0" Grid.Row="1" Content="Имя"/>
-                <Label Grid.Column="0" Grid.Row="2" Content="Отчество"/>
-                <Label Grid.Column="0" Grid.Row="3" Content="Дата"/>
-                <Label Grid.Column="0" Grid.Row="4" Content="Время"/>
-                <Label Grid.Column="0" Grid.Row="5" Content="Врач"/>
-                <Label Grid.Column="0" Grid.Row="6" Content="Комментарий"/>
-
-                <TextBox Grid.Column="1" Grid.Row="0"/>
-                <TextBox Grid.Column="1" Grid.Row="1"/>
-                <TextBox Grid.Column="1" Grid.Row="2"/>
+                <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+                <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
                 <DatePicker Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" FontFamily="BodoniNovaNr" FontSize="15" Foreground="#015c65"/>
 
-                <ComboBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center"/>
-                <TextBox VerticalContentAlignment="Top" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Height="80"/>
+                <ComboBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Style="{StaticResource ComboBox}"/>
+                <TextBox VerticalContentAlignment="Top" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Height="80" Style="{StaticResource TextBox}"/>
             </Grid>
 
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <StackPanel.Resources>
-                    <Style TargetType="Button">
-                        <Setter Property="Background" Value="#e4ebec"/>
-                        <Setter Property="BorderBrush" Value="#015c65"/>
-                        <Setter Property="Margin" Value="6"/>
-                        <Setter Property="VerticalAlignment" Value="Center"/>
-                        <Setter Property="HorizontalAlignment" Value="Right"/>
-                        <Setter Property="Width" Value="70"/>
-                        <Setter Property="FontFamily" Value="BodoniNovaNr"/>
-                        <Setter Property="FontSize" Value="14"/>
-                        <Setter Property="Foreground" Value="#015c65"/>
-                    </Style>
-                </StackPanel.Resources>
-                <Button Content="Добавить"/>
+                <Button Content="{x:Static res:Resources.ButtonAdd}" Style="{StaticResource Button}"/>
             </StackPanel>
         </StackPanel>
 
-        <ListView Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="Gray"/>
+        <ListView Grid.Row="1" Style="{StaticResource ListView}"/>
     </Grid>
 
 </Window>

@@ -69,8 +69,15 @@
     <Style x:Key="DataGrid" TargetType="DataGrid">
         <Setter Property="BorderBrush" Value="#015c65"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="FontSize" Value="14"/>
     </Style>
     <Style x:Key="RadioBtn" TargetType="RadioButton">
         <Setter Property="BorderBrush" Value="#015c65"/>
+    </Style>
+    <Style x:Key="ListView" TargetType="ListView">
+        <Setter Property="BorderBrush" Value="#015c65"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch"/>
+        <Setter Property="VerticalAlignment" Value="Stretch"/>
+        <Setter Property="BorderThickness" Value="0,0,5,0"/>
     </Style>
 </ResourceDictionary>

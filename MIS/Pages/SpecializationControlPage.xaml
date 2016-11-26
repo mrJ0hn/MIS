@@ -4,6 +4,7 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:MIS.Pages"
+            xmlns:res="clr-namespace:MIS.Properties"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="500"
       Title="SpecializationPage">
@@ -20,45 +21,14 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Grid.Resources>
-                <Style TargetType="Button">
-                    <Setter Property="Background" Value="#e4ebec"/>
-                    <Setter Property="BorderBrush" Value="#015c65"/>
-                    <Setter Property="Margin" Value="6"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                    <Setter Property="HorizontalAlignment" Value="Right"/>
-                    <Setter Property="Width" Value="70"/>
-                    <Setter Property="FontFamily" Value="BodoniNovaNr"/>
-                    <Setter Property="FontSize" Value="14"/>
-                    <Setter Property="Foreground" Value="#015c65"/>
-                </Style>
-                <Style TargetType="Label">
-                    <Setter Property="FontFamily" Value="BodoniNovaNr"/>
-                    <Setter Property="FontSize" Value="15"/>
-                    <Setter Property="Foreground" Value="#015c65"/>
-                    <Setter Property="VerticalAlignment" Value="Center"/>
-                    <Setter Property="HorizontalAlignment" Value="Left"/>
-                </Style>
-                <Style TargetType="TextBox">
-                    <Setter Property="VerticalContentAlignment" Value="Center"/>
-                    <Setter Property="BorderBrush" Value="#015c65"/>
-                    <Setter Property="Margin" Value="0,7,0,7"/>
-                    <Setter Property="FontSize" Value="15"/>
-                </Style>
-                <Style TargetType="DataGrid">
-                    <Setter Property="BorderBrush" Value="#015c65"/>
-                    <Setter Property="FontSize" Value="15"/>
-                </Style>
-            </Grid.Resources>
-
-            <DataGrid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" x:Name="gridSpecializations" Height="400">
+            <DataGrid Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" x:Name="gridSpecializations" Height="400" Style="{StaticResource DataGrid}">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Спецаиализация" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
-            <Label Grid.Column="0" Grid.Row="1" Content="Специализация"/>
-            <TextBox Grid.Column="1" Grid.Row="1"/>
-            <Button Grid.Column="1" Grid.Row="2" Content="Добавить"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Style="{StaticResource Button}"/>
         </Grid>
     </StackPanel>
 </Page>

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MIS"
         xmlns:res="clr-namespace:MIS.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="300" d:DesignWidth="300"
+      d:DesignHeight="600" d:DesignWidth="900"
       Title="SchedulePage">
     <Grid Grid.Column="1" Grid.Row="1" Background="White">
         <Grid.RowDefinitions>

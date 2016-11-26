@@ -43,7 +43,7 @@
                 </Button>
                 <Button x:Name="btnControl" Style="{StaticResource LeftButtons}" Click="btnControl_Click">
                     <StackPanel>
-                        <Image Style="{StaticResource Image}" Source="Pictures/Settings.png"/>
+                        <Image Style="{StaticResource Image}" Source="Pictures/Manager.png"/>
                         <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonControl}"/>
                     </StackPanel>
                 </Button>

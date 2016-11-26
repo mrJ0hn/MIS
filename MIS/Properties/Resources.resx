@@ -171,6 +171,9 @@
   <data name="Group" xml:space="preserve">
     <value>Группа</value>
   </data>
+  <data name="Groups" xml:space="preserve">
+    <value>Группы</value>
+  </data>
   <data name="IssuedBy" xml:space="preserve">
     <value>Кем выдан</value>
   </data>
@@ -225,11 +228,17 @@
   <data name="Service" xml:space="preserve">
     <value>Услуга</value>
   </data>
+  <data name="Specailization" xml:space="preserve">
+    <value>Специализация</value>
+  </data>
   <data name="SpecializationControl" xml:space="preserve">
     <value>Специзации</value>
   </data>
   <data name="Surname" xml:space="preserve">
     <value>Фамилия</value>
+  </data>
+  <data name="Time" xml:space="preserve">
+    <value>Время</value>
   </data>
   <data name="WhenIssued" xml:space="preserve">
     <value>Когда выдан</value>

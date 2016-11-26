@@ -39,6 +39,10 @@ namespace MIS.Pages
                 {
                     SetPageInFrame(new DoctorsControlPage());
                 }
+                else if (selectedItem.Name == itemGroupsControl.Name)
+                {
+                    SetPageInFrame(new AddGroup());
+                }
             }
         }
         private void SetPageInFrame(Page page)
