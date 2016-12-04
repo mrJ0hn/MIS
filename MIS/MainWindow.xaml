@@ -10,7 +10,8 @@
         Title="{x:Static res:Resources.NameCompany}" Height="837" Width="1280"
         WindowStartupLocation="CenterScreen"
         WindowState="Maximized"
-        WindowTitleBrush="#015c65">
+        WindowTitleBrush="#015c65" 
+        Icon="Pictures/Icon.png">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100" />
