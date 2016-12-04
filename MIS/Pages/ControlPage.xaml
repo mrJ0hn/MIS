@@ -18,13 +18,13 @@
                  ScrollViewer.VerticalScrollBarVisibility="Hidden" SelectionChanged="listTests_SelectionChanged">
             <ListBox.ItemContainerStyle>
                 <Style TargetType="{x:Type ListBoxItem}">
-                    <Setter Property="Background" Value="#e4ebec"/>
-                    <Setter Property="BorderBrush" Value="#015c65"/>
-                    <Setter Property="Margin" Value="2"/>
+                    <!--<Setter Property="Background" Value="#e4ebec"/>-->
+                    <Setter Property="BorderBrush" Value="Gray"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                    <Setter Property="Margin" Value="3,0"/>
                     <Setter Property="Padding" Value="15"/>
-                    <Setter Property="FontFamily" Value="BodoniNovaNr"/>
                     <Setter Property="FontSize" Value="14"/>
-                    <Setter Property="Foreground" Value="#015c65"/>
+                    <Setter Property="FontWeight" Value="DemiBold"/>
                     <Style.Triggers>
                         <Trigger Property="IsSelected" Value="True">
                             <Setter Property="Foreground" Value="#00796B"/>
@@ -39,6 +39,8 @@
             <ListBoxItem x:Name="itemBlackListControl" Content="{x:Static res:Resources.BlackList}"/>
             <ListBoxItem x:Name="itemPriceControl"  Content="{x:Static res:Resources.BtnPrice}"/>
         </ListBox>
-        <Frame x:Name="frameControl" Grid.Column="1"/>
+        <Border BorderThickness="1,0,0,0" BorderBrush="#015c65"  Grid.Column="1">
+            <Frame x:Name="frameControl" NavigationUIVisibility="Hidden"/>
+        </Border>
     </Grid>
 </Page>

@@ -10,11 +10,11 @@
       Title="BlackListControl">
 
     <StackPanel>
-        <DataGrid x:Name="gridblackList" Height="400" Margin="5">
+        <DataGrid x:Name="gridblackList" Height="400" BorderBrush="Gray" BorderThickness="0.5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="*"/>
-                <DataGridTextColumn Header="Имя" Width="auto"/>
-                <DataGridTextColumn Header="Отчество" Width="auto"/>
+                <DataGridTextColumn Header="Имя" Width="*"/>
+                <DataGridTextColumn Header="Отчество" Width="*"/>
                 <DataGridTextColumn Header="Дата рождения" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
@@ -48,7 +48,7 @@
                 <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
                 <TextBox Width="100" Style="{StaticResource TextBox}"/>
             </StackPanel>
-            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Style="{StaticResource Button}"/>
+            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,0,10,0"/>
         </Grid>
     </StackPanel>
 </Page>

@@ -9,7 +9,10 @@
         mc:Ignorable="d"
         Title="{x:Static res:Resources.ButtonAddClient}" Height="600" Width="700"
         WindowStartupLocation="CenterScreen"
-        WindowTitleBrush="#015c65">
+        WindowTitleBrush="#015c65"
+        BorderBrush="#015c65" 
+        BorderThickness="5">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
@@ -24,6 +27,7 @@
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
+                    <RowDefinition Height="100"/>
                     <RowDefinition Height="100"/>
                 </Grid.RowDefinitions>
 
@@ -47,11 +51,8 @@
 
                 <ComboBox Grid.Column="1" Grid.Row="5" VerticalAlignment="Center" Style="{StaticResource ComboBox}" Margin="10,0,10,0"/>
                 <TextBox VerticalContentAlignment="Top" Grid.Column="1" Grid.Row="6" VerticalAlignment="Center" Height="80" Style="{StaticResource TextBox}"/>
+                <Button Grid.Column="1" Grid.Row="7" Content="{x:Static res:Resources.ButtonAdd}" Height="20" Width="70" HorizontalAlignment="Right"/>
             </Grid>
-
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
-                <Button Content="{x:Static res:Resources.ButtonAdd}"/>
-            </StackPanel>
         </StackPanel>
 
         <ListView Grid.Row="1" Style="{StaticResource ListView}"/>

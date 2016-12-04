@@ -10,7 +10,7 @@
       Title="SpecializationPage">
 
     <StackPanel>
-        <DataGrid x:Name="gridGroup" Height="400" Margin="5">
+        <DataGrid x:Name="gridGroup" Height="400" BorderBrush="Gray" BorderThickness="0.5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Специализации" Width="*"/>
             </DataGrid.Columns>
@@ -29,7 +29,7 @@
 
             <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
             <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
-            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Style="{StaticResource Button}"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,0,10,0"/>
         </Grid>
     </StackPanel>
 </Page>

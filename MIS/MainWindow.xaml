@@ -52,6 +52,6 @@
             </StackPanel>
         </Border>
 
-        <Frame x:Name="frameMain" Grid.Column="1" Grid.Row="1" Source="Pages/SchedulePage.xaml"/>
+        <Frame x:Name="frameMain" Grid.Column="1" Grid.Row="1" Source="Pages/SchedulePage.xaml"  NavigationUIVisibility="Hidden"/>
     </Grid>
 </controls:MetroWindow>

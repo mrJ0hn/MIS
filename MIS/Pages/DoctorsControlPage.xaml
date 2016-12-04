@@ -10,12 +10,12 @@
       Title="DoctorsControlPage">
 
     <StackPanel>
-        <DataGrid x:Name="gridDoctors" Height="400" Margin="5">
+        <DataGrid x:Name="gridDoctors" Height="400" BorderBrush="Gray" BorderThickness="0.5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="*"/>
-                <DataGridTextColumn Header="Имя" Width="auto"/>
-                <DataGridTextColumn Header="Отчество" Width="auto"/>
-                <DataGridTextColumn Header="Специализация" Width="auto"/>
+                <DataGridTextColumn Header="Имя" Width="*"/>
+                <DataGridTextColumn Header="Отчество" Width="*"/>
+                <DataGridTextColumn Header="Специализация" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
         <Grid Margin="10">
@@ -44,7 +44,7 @@
             <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
             <ComboBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Style="{StaticResource ComboBox}"/>
 
-            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Style="{StaticResource Button}"/>
+            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" HorizontalAlignment="Right"/>
         </Grid>
     </StackPanel>
 </Page>

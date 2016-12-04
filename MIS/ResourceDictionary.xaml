@@ -56,14 +56,11 @@
         <Setter Property="Margin" Value="7"/>
     </Style>
     <Style x:Key="Button" TargetType="Button">
-        <Setter Property="Background" Value="#e4ebec"/>
         <Setter Property="BorderBrush" Value="#015c65"/>
         <Setter Property="Margin" Value="6"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="Width" Value="75"/>
-        <Setter Property="FontFamily" Value="BodoniNovaNr"/>
-        <Setter Property="FontSize" Value="14"/>
         <Setter Property="Foreground" Value="#015c65"/>
     </Style>
     <Style x:Key="DataGrid" TargetType="DataGrid">
@@ -79,5 +76,9 @@
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
         <Setter Property="VerticalAlignment" Value="Stretch"/>
         <Setter Property="BorderThickness" Value="0,0,5,0"/>
+    </Style>
+    <Style x:Key="ListLabel" TargetType="Label">
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
     </Style>
 </ResourceDictionary>
