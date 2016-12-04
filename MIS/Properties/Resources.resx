@@ -207,6 +207,9 @@
   <data name="Namber" xml:space="preserve">
     <value>Номер</value>
   </data>
+  <data name="NameCompany" xml:space="preserve">
+    <value>Архангельская медицинская компания</value>
+  </data>
   <data name="Passport" xml:space="preserve">
     <value>Паспорт</value>
   </data>

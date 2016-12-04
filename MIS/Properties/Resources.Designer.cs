@@ -331,6 +331,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Архангельская медицинская компания.
+        /// </summary>
+        public static string NameCompany {
+            get {
+                return ResourceManager.GetString("NameCompany", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Паспорт.
         /// </summary>
         public static string Passport {
