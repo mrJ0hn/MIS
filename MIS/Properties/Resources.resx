@@ -129,6 +129,9 @@
   <data name="BlackList" xml:space="preserve">
     <value>Черный список</value>
   </data>
+  <data name="BtnPrice" xml:space="preserve">
+    <value>Прейскурант</value>
+  </data>
   <data name="ButtonAdd" xml:space="preserve">
     <value>Добавить</value>
   </data>

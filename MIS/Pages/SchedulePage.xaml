@@ -14,7 +14,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="350"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
@@ -34,10 +34,11 @@
             </Border>
             <ListView
                 x:Name="listEmployees" Grid.Row="1" VerticalAlignment="Stretch" 
-                BorderBrush="#015c65" BorderThickness="0,0,1,1" HorizontalContentAlignment="Stretch">
+                BorderBrush="#015c65" BorderThickness="0,0,1,1" HorizontalContentAlignment="Stretch"
+                ScrollViewer.VerticalScrollBarVisibility="Hidden">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
-                        <Border Margin="0,3" BorderThickness="0,0,0,1" BorderBrush="Gray" CornerRadius="3">
+                        <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="Gray">
                             <Grid Margin="3" >
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="*"/>
@@ -45,7 +46,6 @@
                                 <Label VerticalAlignment="Bottom"
                                     Style="{StaticResource LabelButton}" 
                                     HorizontalContentAlignment="Left" 
-                                    VerticalContentAlignment="Bottom"
                                     Content="{Binding FullName}"/>
                             </Grid>
                         </Border>

@@ -35,10 +35,9 @@
                 </Style>
             </ListBox.ItemContainerStyle>
             <ListBoxItem x:Name="itemSpecializationControl" Content="{x:Static res:Resources.SpecializationControl}"/>
-            <ListBoxItem x:Name="itemGroupsControl" Content="{x:Static res:Resources.Groups}"/>
             <ListBoxItem x:Name="itemDoctorsControl" Content="{x:Static res:Resources.DoctorsControl}"/>
             <ListBoxItem x:Name="itemBlackListControl" Content="{x:Static res:Resources.BlackList}"/>
-            <ListBoxItem>Управление врачами</ListBoxItem>
+            <ListBoxItem x:Name="itemPriceControl"  Content="{x:Static res:Resources.BtnPrice}"/>
         </ListBox>
         <Frame x:Name="frameControl" Grid.Column="1"/>
     </Grid>

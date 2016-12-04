@@ -39,13 +39,13 @@ namespace MIS.Pages
                 {
                     SetPageInFrame(new DoctorsControlPage());
                 }
-                else if (selectedItem.Name == itemGroupsControl.Name)
-                {
-                    SetPageInFrame(new AddGroup());
-                }
                 else if (selectedItem.Name == itemBlackListControl.Name)
                 {
                     SetPageInFrame(new BlackListControl());
+                }
+                else if (selectedItem.Name == itemPriceControl.Name)
+                {
+                    SetPageInFrame(new PriceControl());
                 }
             }
         }

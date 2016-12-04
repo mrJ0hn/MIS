@@ -97,6 +97,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Прейскурант.
+        /// </summary>
+        public static string BtnPrice {
+            get {
+                return ResourceManager.GetString("BtnPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Добавить.
         /// </summary>
         public static string ButtonAdd {
