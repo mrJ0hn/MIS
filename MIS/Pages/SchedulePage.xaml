@@ -32,7 +32,26 @@
             <Border Grid.Row="0" BorderBrush="#015c65" BorderThickness="0,0,0,1">
                 <Label Style="{StaticResource SecondTitleLabel}" Content="{x:Static res:Resources.LabelWorker}"/>
             </Border>
-            <ListView Grid.Row="1" Margin="5,5,0,0" VerticalAlignment="Stretch" BorderBrush="#015c65"/>
+            <ListView
+                x:Name="listEmployees" Grid.Row="1" VerticalAlignment="Stretch" 
+                BorderBrush="#015c65" BorderThickness="0,0,1,1" HorizontalContentAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Border Margin="0,3" BorderThickness="0,0,0,1" BorderBrush="Gray" CornerRadius="3">
+                            <Grid Margin="3" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*"/>
+                                </Grid.RowDefinitions>
+                                <Label VerticalAlignment="Bottom"
+                                    Style="{StaticResource LabelButton}" 
+                                    HorizontalContentAlignment="Left" 
+                                    VerticalContentAlignment="Bottom"
+                                    Content="{Binding FullName}"/>
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListView>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="1">
@@ -71,7 +90,7 @@
                     </StackPanel>
                 </Button>
             </Grid>
-            <local:CustomCalendar Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,10,0"/>
+            <local:CustomCalendar x:Name="calendar" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,10,0"/>
         </Grid>
     </Grid>
 </Page>

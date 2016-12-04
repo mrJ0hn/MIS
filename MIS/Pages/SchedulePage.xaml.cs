@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MIS.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,42 @@ namespace MIS.Pages
         public SchedulePage()
         {
             InitializeComponent();
+            List<Visitor> visitors = new List<Visitor>();
+            Visitor visitor = new Visitor()
+            {
+                FullName = "Александров Александр",
+            };
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            listEmployees.ItemsSource = visitors;
         }
         private void btnNewVisitor_Click(object sender, RoutedEventArgs e)
         {

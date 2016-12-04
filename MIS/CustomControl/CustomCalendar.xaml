@@ -4,7 +4,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:MIS"
-             mc:Ignorable="d">
+             mc:Ignorable="d"
+             d:DesignHeight="600" d:DesignWidth="1000"
+             >
     <ScrollViewer   HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Hidden" 
                     PreviewMouseWheel="ScrollViewer_PreviewMouseWheel">
         <Grid>
@@ -75,7 +77,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -92,7 +94,7 @@
 
             <DataGrid Name="gridMondey" Grid.Column="0" Grid.Row="1">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Время" Width="50" Binding="{Binding Date, StringFormat=\{0:H:mm\}}"/>
+                    <DataGridTextColumn Header="Время" Width="50" Binding="{Binding VisitDate, StringFormat=\{0:H:mm\}}"/>
                     <DataGridTextColumn Header="ФИО"  Width="*" Binding="{Binding FullName}"/>
                 </DataGrid.Columns>
             </DataGrid>

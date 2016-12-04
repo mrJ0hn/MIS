@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,11 +21,29 @@ namespace MIS
     /// </summary>
     public partial class CustomCalendar : UserControl
     {
+        private DateTime beginningWeek;
+        private IEnumerable itemsSource;
+        public IEnumerable ItemsSource
+        {
+            get { return itemsSource; }
+            set {
+                itemsSource = value;
+                UpdateUI(value);
+            }
+        }
+
+        private void UpdateUI(IEnumerable value)
+        {
+            gridMondey.ItemsSource = value;
+        }
+
         public CustomCalendar()
         {
             InitializeComponent();
+            beginningWeek = DateTime.Now.Date;
             UpdateTitleDataGrid();
         }
+
         private void ScrollViewer_PreviewMouseWheel(object sender, MouseWheelEventArgs e)
         {
             ScrollViewer scv = (ScrollViewer)sender;
@@ -34,8 +53,7 @@ namespace MIS
 
         private void UpdateTitleDataGrid()
         {
-            var date = DateTime.Now;
-            var curDay = FindMondey(date);
+            var curDay = FindMondey(beginningWeek);
             txtMondey.Content = "Пн " + curDay.Date.ToShortDateString();
             curDay = curDay.AddDays(1);
             txtTuesday.Content = "Вт " + curDay.Date.ToShortDateString();
