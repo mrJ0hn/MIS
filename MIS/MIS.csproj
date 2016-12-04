@@ -55,6 +55,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Visitor.cs" />
     <Compile Include="Pages\AddGroup.xaml.cs">
       <DependentUpon>AddGroup.xaml</DependentUpon>
     </Compile>
