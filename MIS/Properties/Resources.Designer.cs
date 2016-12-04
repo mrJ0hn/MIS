@@ -412,7 +412,7 @@ namespace MIS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Специзации.
+        ///   Ищет локализованную строку, похожую на Специализации.
         /// </summary>
         public static string SpecializationControl {
             get {

@@ -23,7 +23,7 @@
 
         <Border Grid.Column="0" Grid.Row="1" BorderBrush="#015c65" BorderThickness="0,0,1,0">
             <StackPanel Background="#e4ebec">
-                <Button x:Name="btnSchedule" Style="{StaticResource LeftButtons}" Click="btnSchedule_Click" >
+                <Button x:Name="btnSchedule" Style="{StaticResource LeftButtons}" Click="btnSchedule_Click" Margin="0,5,0,0">
                     <StackPanel>
                         <Image Style="{StaticResource Image}" Source="Pictures/Schedule.png"/>
                         <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonSchedule}"/>

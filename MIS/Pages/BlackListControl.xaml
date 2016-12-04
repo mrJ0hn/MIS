@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:MIS.Pages"
       xmlns:res="clr-namespace:MIS.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="600" d:DesignWidth="300"
+      d:DesignHeight="700" d:DesignWidth="500"
       Title="BlackListControl">
 
     <StackPanel>
@@ -48,8 +48,6 @@
                 <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
                 <TextBox Width="100" Style="{StaticResource TextBox}"/>
             </StackPanel>
-
-
             <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Style="{StaticResource Button}"/>
         </Grid>
     </StackPanel>
