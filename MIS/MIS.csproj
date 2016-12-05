@@ -39,6 +39,9 @@
       <HintPath>..\packages\MahApps.Metro.1.3.0\lib\net45\MahApps.Metro.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="QuickWPFMonthCalendar">
+      <HintPath>..\..\..\..\..\..\Downloads\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1\bin\Release\QuickWPFMonthCalendar.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -194,13 +197,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Pictures\Icon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\..\..\Downloads\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1.vbproj">
-      <Project>{a9be9c4e-843b-4a28-b1b3-e2533e2394c2}</Project>
-      <Name>QuickWPFMonthCalendar1-1</Name>
-      <EmbedInteropTypes>False</EmbedInteropTypes>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
