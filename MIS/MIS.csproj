@@ -199,6 +199,7 @@
     <ProjectReference Include="..\..\..\..\..\..\Downloads\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1.vbproj">
       <Project>{a9be9c4e-843b-4a28-b1b3-e2533e2394c2}</Project>
       <Name>QuickWPFMonthCalendar1-1</Name>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
