@@ -65,6 +65,7 @@
     </Compile>
     <Compile Include="Model\Employees.cs" />
     <Compile Include="Model\Visitor.cs" />
+    <Compile Include="Model\Appointment.cs" />
     <Compile Include="Pages\BlackListControl.xaml.cs">
       <DependentUpon>BlackListControl.xaml</DependentUpon>
     </Compile>
@@ -195,9 +196,9 @@
     <Resource Include="Pictures\Icon.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OutlookCalendar\OutlookCalendar\OutlookCalendar\OutlookCalendar.csproj">
-      <Project>{b6185ed0-45ea-4684-9726-490b85ef478a}</Project>
-      <Name>OutlookCalendar</Name>
+    <ProjectReference Include="..\..\..\..\..\..\Downloads\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1.vbproj">
+      <Project>{a9be9c4e-843b-4a28-b1b3-e2533e2394c2}</Project>
+      <Name>QuickWPFMonthCalendar1-1</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

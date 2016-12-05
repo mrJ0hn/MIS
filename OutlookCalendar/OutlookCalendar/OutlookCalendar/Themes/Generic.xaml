@@ -115,7 +115,7 @@
                             <local:CalendarLedgerItem TimeslotA="9" TimeslotB="00" />
                             <local:CalendarLedgerItem TimeslotA="10" TimeslotB="00" />
                             <local:CalendarLedgerItem TimeslotA="11" TimeslotB="00" />
-                            <local:CalendarLedgerItem TimeslotA="12" TimeslotB="pm" />
+                            <local:CalendarLedgerItem TimeslotA="12" TimeslotB="00" />
                             <local:CalendarLedgerItem TimeslotA="13" TimeslotB="00" />
                             <local:CalendarLedgerItem TimeslotA="14" TimeslotB="00" />
                             <local:CalendarLedgerItem TimeslotA="15" TimeslotB="00" />

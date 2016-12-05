@@ -22,13 +22,13 @@ namespace OutlookCalendar.Controls
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(Calendar), new FrameworkPropertyMetadata(typeof(Calendar)));
 
-            CommandManager.RegisterClassCommandBinding(typeof(Calendar), new CommandBinding(NextDay, new ExecutedRoutedEventHandler(OnExecutedNextDay), new CanExecuteRoutedEventHandler(OnCanExecuteNextDay)));
-            CommandManager.RegisterClassCommandBinding(typeof(Calendar), new CommandBinding(PreviousDay, new ExecutedRoutedEventHandler(OnExecutedPreviousDay), new CanExecuteRoutedEventHandler(OnCanExecutePreviousDay)));
+            //CommandManager.RegisterClassCommandBinding(typeof(Calendar), new CommandBinding(NextDay, new ExecutedRoutedEventHandler(OnExecutedNextDay), new CanExecuteRoutedEventHandler(OnCanExecuteNextDay)));
+            //CommandManager.RegisterClassCommandBinding(typeof(Calendar), new CommandBinding(PreviousDay, new ExecutedRoutedEventHandler(OnExecutedPreviousDay), new CanExecuteRoutedEventHandler(OnCanExecutePreviousDay)));
         }
 
         #region AddAppointment
 
-        public static readonly RoutedEvent AddAppointmentEvent = 
+        public readonly RoutedEvent AddAppointmentEvent =
             CalendarTimeslotItem.AddAppointmentEvent.AddOwner(typeof(CalendarDay));
 
         public event RoutedEventHandler AddAppointment
@@ -67,8 +67,8 @@ namespace OutlookCalendar.Controls
             FilterAppointments();
         }
 
-        #endregion        
-       
+        #endregion
+
         #region CurrentDate
 
         /// <summary>
@@ -95,6 +95,7 @@ namespace OutlookCalendar.Controls
         private static void OnCurrentDateChanged(DependencyObject d, DependencyPropertyChangedEventArgs e)
         {
             ((Calendar)d).OnCurrentDateChanged(e);
+            
         }
 
         /// <summary>
@@ -105,14 +106,12 @@ namespace OutlookCalendar.Controls
             FilterAppointments();
         }
 
-        #endregion             
-        
+        #endregion
         private void FilterAppointments()
         {
             DateTime byDate = CurrentDate;
             CalendarDay day = this.GetTemplateChild("day") as CalendarDay;
             day.ItemsSource = Appointments.ByDate(byDate);
-
             TextBlock dayHeader = this.GetTemplateChild("dayHeader") as TextBlock;
             dayHeader.Text = byDate.ToString("d MMMM");
         }
@@ -141,7 +140,7 @@ namespace OutlookCalendar.Controls
         protected virtual void OnExecutedNextDay(ExecutedRoutedEventArgs e)
         {
             CurrentDate += TimeSpan.FromDays(1);
-            e.Handled = true;            
+            e.Handled = true;
         }
 
         private static void OnCanExecutePreviousDay(object sender, CanExecuteRoutedEventArgs e)
