@@ -1,4 +1,5 @@
 ﻿using MIS.Model;
+using QuickWPFMonthCalendar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace MIS.Pages
     /// </summary>
     public partial class SchedulePage : Page
     {
-        private static List<QuickWPFMonthCalendar.Appointment> data = new List<QuickWPFMonthCalendar.Appointment>();
+        private List<Appointment> data = new List<Appointment>();
         public SchedulePage()
         {
             InitializeComponent();
@@ -41,7 +42,7 @@ namespace MIS.Pages
             Random rand = new Random();
             for (int i = 0; i < 10; i++)
             {
-                QuickWPFMonthCalendar.Appointment apt = new QuickWPFMonthCalendar.Appointment()
+                Appointment apt = new Appointment()
                 {
                     AppointmentID = i,
                     StartTime = new DateTime(DateTime.Now.Year,

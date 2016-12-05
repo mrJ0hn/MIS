@@ -69,7 +69,6 @@
     </Compile>
     <Compile Include="Model\Employees.cs" />
     <Compile Include="Model\Visitor.cs" />
-    <Compile Include="Model\Appointment.cs" />
     <Compile Include="Pages\BlackListControl.xaml.cs">
       <DependentUpon>BlackListControl.xaml</DependentUpon>
     </Compile>
