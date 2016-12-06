@@ -20,7 +20,7 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Background="#4db6ac" Margin="0,10,0,0">
+        <StackPanel Orientation="Horizontal" Background="AliceBlue" Margin="0,10,0,0">
             <Image x:Name="MonthGoPrev" Source="..//../Images/ForwardGreen.png" Height="24" RenderTransformOrigin="0.5,0.5" Margin="20,0,6,0"
                        MouseLeftButtonUp="MonthGoPrev_MouseLeftButtonUp">
                 <Image.RenderTransform>
@@ -32,7 +32,7 @@
             <Label x:Name="MonthYearLabel" Content="March 2009" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </StackPanel>
-        <Grid Grid.Row="1" Background="#4db6ac" Margin="0,0,0,5">
+        <Grid Grid.Row="1" Background="AliceBlue" Margin="0,0,0,5">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="20"/>
                 <ColumnDefinition Width="*"/>
