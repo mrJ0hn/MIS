@@ -9,7 +9,7 @@ Imports System.Collections.Generic
 Partial Public Class MonthView
 
     Private _dayBackBrush As Media.Brush = Media.Brushes.White
-    Private _todayBackBrush As Media.Brush = Media.Brushes.Orange
+    Private _todayBackBrush As Media.Brush = New Media.BrushConverter().ConvertFrom("#FFCE73")
     Private _targetBackBrush As Media.Brush = Windows.Media.Brushes.LightSlateGray
 
     Friend _DisplayStartDate As Date = Date.Now.AddDays(-1 * (Date.Now.Day - 1))
@@ -93,7 +93,10 @@ Partial Public Class MonthView
             '-- customize daybox for today:
             If (New Date(_DisplayYear, _DisplayMonth, i)) = Date.Today Then
                 dayBox.DayLabelRowBorder.Background = _todayBackBrush
-                dayBox.DayAppointmentsStack.Background = Brushes.Wheat
+                dayBox.DayAppointmentsStack.Background = Brushes.Cornsilk
+
+                'BrushConverter().ConvertFrom("#4577D4")
+
             End If
 
             '-- for design mode, add appointments to random days for show...
@@ -242,7 +245,7 @@ Partial Public Class MonthView
 
     Private Sub RestoreDayBoxBackground(ByVal DayBox As DayBoxControl)
         If DayBox.Tag = Date.Today.Day Then
-            DayBox.DayAppointmentsStack.Background = Brushes.Wheat
+            DayBox.DayAppointmentsStack.Background = Brushes.Cornsilk
         Else
             DayBox.DayAppointmentsStack.Background = _dayBackBrush
         End If

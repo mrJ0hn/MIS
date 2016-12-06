@@ -40,7 +40,7 @@ namespace MIS.Pages
         private void LoadAppointment()
         {
             Random rand = new Random();
-            for (int i = 0; i < 200; i++)
+            for (int i = 0; i < 50; i++)
             {
                 Appointment apt = new Appointment()
                 {
@@ -48,7 +48,7 @@ namespace MIS.Pages
                     StartTime = new DateTime(DateTime.Now.Year,
                                          12,
                                          rand.Next(1, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month))),
-                    Subject = i+" Суханов Евгений"
+                    Subject = "10:50 Суханов Евгений"
                 };
                 data.Add(apt);
             }
