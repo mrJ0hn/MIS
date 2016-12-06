@@ -11,8 +11,8 @@
 
     <Grid Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
             <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="6*"/>
         </Grid.ColumnDefinitions>
         <ListBox x:Name="listTests" Grid.Column="0" HorizontalContentAlignment="Stretch" 
                  ScrollViewer.VerticalScrollBarVisibility="Hidden" SelectionChanged="listTests_SelectionChanged"
