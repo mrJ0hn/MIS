@@ -31,29 +31,26 @@ namespace MIS.Pages
             UpdateData();
             //calendarTuesday.Appointments = appointments2;
         }
-
         private void UpdateData()
         {
-            AptCalendar.MonthAppointments = data;
+            aptCalendar.MonthAppointments = data;
         }
-
         private void LoadAppointment()
         {
             Random rand = new Random();
-            for (int i = 0; i < 50; i++)
+            for (int i = step; i < 5+step; i++)
             {
                 Appointment apt = new Appointment()
                 {
-                    AppointmentID = i,
-                    StartTime = new DateTime(DateTime.Now.Year,
-                                         12,
+                    AppointmentID = i*step,
+                    StartTime = new DateTime(aptCalendar.DisplayStartDate.Year,
+                                         aptCalendar.DisplayStartDate.Month,
                                          rand.Next(1, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month))),
                     Subject = "10:50 Суханов Евгений"
                 };
                 data.Add(apt);
             }
         }
-
         private List<Visitor> GetVisitors()
         {
             List<Visitor> visitors = new List<Visitor>();
@@ -85,10 +82,16 @@ namespace MIS.Pages
             visitors.Add(visitor);
             return visitors;
         }
-
         private void btnNewVisitor_Click(object sender, RoutedEventArgs e)
         {
             new AddClientWindow().Show();
+        }
+        int step = 1;
+        private void aptCalendar_DisplayMonthChanged(MonthChangedEventArgs e)
+        {
+            step+=5;
+            LoadAppointment();
+            UpdateData();
         }
     }
 }

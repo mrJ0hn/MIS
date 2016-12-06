@@ -153,11 +153,11 @@ Partial Public Class MonthView
 
 #Region " UI Event Handlers "
 
-    Private Sub MonthGoPrev_MouseLeftButtonUp(ByVal sender As System.Object, ByVal e As MouseButtonEventArgs)
+    Private Sub MonthGoPrev_MouseLeftButtonUp(ByVal sender As System.Object, ByVal e As RoutedEventArgs)
         UpdateMonth(-1)
     End Sub
 
-    Private Sub MonthGoNext_MouseLeftButtonUp(ByVal sender As System.Object, ByVal e As MouseButtonEventArgs)
+    Private Sub MonthGoNext_MouseLeftButtonUp(ByVal sender As System.Object, ByVal e As RoutedEventArgs)
         UpdateMonth(1)
     End Sub
 

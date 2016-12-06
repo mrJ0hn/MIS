@@ -90,7 +90,9 @@
             </Grid>-->
             <!--<local:CustomCalendar x:Name="calendar" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,10,0"/>-->
 
-            <cal:MonthView Grid.Row="2" x:Name="AptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"/>
+            <cal:MonthView Grid.Row="2" 
+                           x:Name="aptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"
+                           DisplayMonthChanged="aptCalendar_DisplayMonthChanged"/>
         </Grid>
     </Grid>
 </Page>
