@@ -1,0 +1,84 @@
+﻿<UserControl x:Class="MonthView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
+    HorizontalAlignment="Stretch" VerticalAlignment="Stretch" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch">
+
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <LinearGradientBrush x:Key="OrangeGradientBrush" EndPoint="0,1" StartPoint="0,0">
+                <GradientStop Color="#FFFFFFDC" Offset="0"/>
+                <GradientStop Color="#FFFADC96" Offset="0.525"/>
+                <GradientStop Color="#FFF9D07D" Offset="0.732"/>
+                <GradientStop Color="#FFF7BE57" Offset="1"/>
+            </LinearGradientBrush>
+        </ResourceDictionary>
+    </UserControl.Resources>
+
+    <Grid VerticalAlignment="Stretch">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+<<<<<<< HEAD
+        <StackPanel Orientation="Horizontal" Background="AliceBlue">
+            <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="30" Click="MonthGoPrev_MouseLeftButtonUp" Margin="5,0">
+                <Image x:Name="MonthGoPrev" Source="..//../Images/ForwardGreen.png"/>
+            </Button>
+            <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="30" Click="MonthGoNext_MouseLeftButtonUp">
+                <Image Name="MonthGoNext" Source="..//../Images/ForwardGreen.png"/>
+            </Button>
+=======
+        <StackPanel Orientation="Horizontal" Background="#4db6ac" Margin="0,10,0,0">
+            <Image x:Name="MonthGoPrev" Source="..//../Images/ForwardGreen.png" Height="24" RenderTransformOrigin="0.5,0.5" Margin="20,0,6,0"
+                       MouseLeftButtonUp="MonthGoPrev_MouseLeftButtonUp">
+                <Image.RenderTransform>
+                    <RotateTransform Angle="180"/>
+                </Image.RenderTransform>
+            </Image>
+            <Image Name="MonthGoNext" Source="..//../Images/ForwardGreen.png" Height="24" Margin="6,0,6,0"
+                   MouseLeftButtonUp="MonthGoNext_MouseLeftButtonUp"/>
+>>>>>>> 7f90d97d8f94e7395c46ba892891f841340fd211
+            <Label x:Name="MonthYearLabel" Content="March 2009" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold"
+                   VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <Grid Grid.Row="1" Background="#4db6ac" Margin="0,0,0,5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.Resources>
+                <Style TargetType="Label">
+                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="Margin" Value="2,0,0,2"/>
+                    <Setter Property="HorizontalAlignment" Value="Center"/>
+                    <Setter Property="VerticalAlignment" Value="Center"/>
+                    <Setter Property="Padding" Value="0,1,0,0"/>
+                    <Setter Property="BorderThickness" Value="0,1,0,0"/>
+                </Style>
+            </Grid.Resources>
+            <Label Grid.Column="1" Content="Воскресенье"/>
+            <Label Grid.Column="2" Content="Понедельник"/>
+            <Label Grid.Column="3" Content="Вторник"/>
+            <Label Grid.Column="4" Content="Среда"/>
+            <Label Grid.Column="5" Content="Четверг"/>
+            <Label Grid.Column="6" Content="Пятница"/>
+            <Label Grid.Column="7" Content="Суббота"/>
+        </Grid>
+        <!--<StackPanel x:Name="MonthViewStack" Grid.Row="2">
+            
+        </StackPanel>-->
+        <Grid x:Name="MonthViewGrid" Grid.Row="2" AllowDrop="True" PreviewDrop="MonthViewGrid_PreviewDrop">
+            <Grid.RowDefinitions>
+            </Grid.RowDefinitions>
+        </Grid>
+
+    </Grid>
+</UserControl>
