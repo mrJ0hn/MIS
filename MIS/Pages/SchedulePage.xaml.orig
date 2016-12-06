@@ -1,4 +1,4 @@
-<Page x:Class="MIS.Pages.SchedulePage"
+﻿<Page x:Class="MIS.Pages.SchedulePage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -88,9 +88,15 @@
                     </StackPanel>
                 </Button>
             </Grid>-->
+<<<<<<< HEAD
+            <!--<local:CustomCalendar x:Name="calendar" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,10,0"/>-->
+
             <cal:MonthView Grid.Row="2" 
                            x:Name="aptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"
                            DisplayMonthChanged="aptCalendar_DisplayMonthChanged"/>
+=======
+            <cal:MonthView Grid.Row="2" x:Name="AptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"/>
+>>>>>>> 7f90d97d8f94e7395c46ba892891f841340fd211
         </Grid>
     </Grid>
 </Page>
