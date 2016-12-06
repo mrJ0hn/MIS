@@ -20,7 +20,7 @@
                 <RowDefinition Height="21"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="1" Background="LightSteelBlue" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+            <Border Grid.Row="1" Background="#80cbc4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
                     Padding="0,0,0,0"/>
         </Grid>
 

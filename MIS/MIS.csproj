@@ -41,7 +41,7 @@
     </Reference>
     <Reference Include="QuickWPFMonthCalendar, Version=1.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>.\QuickWPFMonthCalendar.dll</HintPath>
+      <HintPath>..\QuickWPFMonthCalendar1-1\QuickWPFMonthCalendar1-1\bin\Release\QuickWPFMonthCalendar.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

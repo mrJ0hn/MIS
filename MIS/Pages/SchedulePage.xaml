@@ -48,13 +48,13 @@
         <Grid Grid.Column="1" Grid.Row="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="auto"/>
+                <RowDefinition Height="0"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
             <Border Grid.Row="0" BorderBrush="#015c65" BorderThickness="0,0,0,1">
                 <Label Style="{StaticResource SecondTitleLabel}" Content="{x:Static res:Resources.LabelShedule}"/>
             </Border>
-            <Grid Grid.Row="1">
+            <!--<Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="40"/>
@@ -87,10 +87,10 @@
                         <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonAddClient}" Margin="0"/>
                     </StackPanel>
                 </Button>
-            </Grid>
+            </Grid>-->
             <!--<local:CustomCalendar x:Name="calendar" Grid.Row="2" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Margin="0,20,10,0"/>-->
 
-            <cal:MonthView Grid.Row="2" x:Name="AptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,1"/>
+            <cal:MonthView Grid.Row="2" x:Name="AptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"/>
         </Grid>
     </Grid>
 </Page>
