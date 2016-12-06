@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MIS.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,43 @@ namespace MIS.Pages
     /// </summary>
     public partial class DoctorsControlPage : Page
     {
+        private List<Visitor> listSpecializations = new List<Visitor>();
         public DoctorsControlPage()
         {
             InitializeComponent();
+            listSpecializations = GetSpecialization();
+            comboBoxSpecialization.ItemsSource = listSpecializations;
+        }
+        private List<Visitor> GetSpecialization()
+        {
+            List<Visitor> visitors = new List<Visitor>();
+            Visitor visitor = new Visitor()
+            {
+                FullName = "Александров Александр",
+            };
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            visitors.Add(visitor);
+            return visitors;
         }
     }
 }

@@ -45,7 +45,7 @@ namespace MIS.Pages
                     AppointmentID = i*step,
                     StartTime = new DateTime(aptCalendar.DisplayStartDate.Year,
                                          aptCalendar.DisplayStartDate.Month,
-                                         rand.Next(1, DateTime.DaysInMonth(DateTime.Now.Year, DateTime.Now.Month))),
+                                         rand.Next(1, DateTime.DaysInMonth(aptCalendar.DisplayStartDate.Year, aptCalendar.DisplayStartDate.Month))),
                     Subject = "10:50 Суханов Евгений"
                 };
                 data.Add(apt);

@@ -6,16 +6,16 @@
       xmlns:local="clr-namespace:MIS.Pages"
             xmlns:res="clr-namespace:MIS.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="800" d:DesignWidth="500"
+      d:DesignHeight="800" d:DesignWidth="1500"
       Title="SpecializationPage">
 
     <StackPanel>
-        <DataGrid x:Name="gridGroup" Height="400" BorderBrush="Gray" BorderThickness="0.5">
+        <DataGrid x:Name="gridGroup" Height="600" BorderBrush="Gray" BorderThickness="0.5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Специализации" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid Margin="10">
+        <Grid Margin="50,10">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition Height="40"/>
@@ -27,9 +27,12 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"
+                   HorizontalContentAlignment="Right" Margin="0,0,10,0"/>
             <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
-            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,0,10,0"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}"
+                    Height="20" Width="100" HorizontalAlignment="Right" Margin="0,30,10,0"
+                    />
         </Grid>
     </StackPanel>
 </Page>
