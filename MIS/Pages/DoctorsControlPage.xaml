@@ -10,7 +10,7 @@
       d:DesignHeight="900" d:DesignWidth="1000"
       Title="DoctorsControlPage">
 
-    <Grid Background="#50e4ebec" >
+    <Grid Background="#50e4ebec">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="auto"/>
