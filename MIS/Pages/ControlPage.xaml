@@ -6,7 +6,7 @@
       xmlns:res="clr-namespace:MIS.Properties"
       xmlns:local="clr-namespace:MIS.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="500" d:DesignWidth="700"
+      d:DesignHeight="500" d:DesignWidth="1000"
       Title="ControlPage">
 
     <Grid Background="White">
@@ -34,12 +34,11 @@
                     </Style.Triggers>
                 </Style>
             </ListBox.ItemContainerStyle>
-            <ListBoxItem x:Name="itemSpecializationControl" Content="{x:Static res:Resources.SpecializationControl}"/>
             <ListBoxItem x:Name="itemDoctorsControl" Content="{x:Static res:Resources.DoctorsControl}"/>
-            <ListBoxItem x:Name="itemBlackListControl" Content="{x:Static res:Resources.BlackList}"/>
             <ListBoxItem x:Name="itemPriceControl"  Content="{x:Static res:Resources.BtnPrice}"/>
+            <ListBoxItem x:Name="itemBlackListControl" Content="{x:Static res:Resources.BlackList}"/>
         </ListBox>
-        <Border BorderThickness="1,0,0,0" BorderBrush="#015c65"  Grid.Column="1">
+        <Border BorderThickness="1,0,0,0" BorderBrush="Gray"  Grid.Column="1">
             <Frame x:Name="frameControl" NavigationUIVisibility="Hidden"/>
         </Border>
     </Grid>

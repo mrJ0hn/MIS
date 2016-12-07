@@ -15,7 +15,13 @@
             <RowDefinition Height="1.8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <DataGrid x:Name="gridDoctors" Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="Gray" BorderThickness="0.5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="auto"/>
+        </Grid.ColumnDefinitions>
+        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="Gray" BorderThickness="0,0.5">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="*"/>
                 <DataGridTextColumn Header="Имя" Width="*"/>
@@ -23,7 +29,7 @@
                 <DataGridTextColumn Header="Специализация" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid Margin="50,10" Grid.Row="1" VerticalAlignment="Top">
+        <Grid Margin="30,10" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
@@ -36,32 +42,50 @@
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"
-                   HorizontalContentAlignment="Right" Margin="0,0,10,0" HorizontalAlignment="Stretch"/>
+            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
             <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" />
 
-            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"
-                   HorizontalContentAlignment="Right" Margin="0,0,10,0" HorizontalAlignment="Stretch"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
             <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
 
-            <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"
-                    HorizontalContentAlignment="Right" Margin="0,0,10,0" HorizontalAlignment="Stretch"/>
+            <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
             <TextBox  Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
 
-            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"
-                   HorizontalContentAlignment="Right" Margin="0,0,10,0" HorizontalAlignment="Stretch"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
             <!--<ComboBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Style="{StaticResource ComboBox}"/>-->
 
             <controls:DropDownButton  Grid.Column="1" Grid.Row="3"
                                       x:Name="comboBoxSpecialization"
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
-                                      Height="30">
-            </controls:DropDownButton>
+                                      Height="30"/>
 
+            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" HorizontalAlignment="Right"
+                     Margin="0,20,0,0"/>
+        </Grid>
 
+        <Border Grid.RowSpan="2" Grid.Column="1" VerticalAlignment="Stretch" BorderThickness="8,0,0,0" BorderBrush="#015c65"/>
+        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="Gray" BorderThickness="0,0.5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Специализации" Width="*"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Margin="30,10" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" HorizontalAlignment="Right"/>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
+            <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}"
+                    Width="100" HorizontalAlignment="Right" Margin="0,20,0,0"/>
         </Grid>
     </Grid>
 </Page>

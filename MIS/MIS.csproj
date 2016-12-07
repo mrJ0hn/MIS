@@ -80,9 +80,6 @@
     <Compile Include="Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Pages\SpecializationControlPage.xaml.cs">
-      <DependentUpon>SpecializationControlPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="СlientСardWindow.xaml.cs">
       <DependentUpon>СlientСardWindow.xaml</DependentUpon>
     </Compile>
@@ -129,10 +126,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\SchedulePage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Pages\SpecializationControlPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

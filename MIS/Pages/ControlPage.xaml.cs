@@ -31,11 +31,7 @@ namespace MIS.Pages
             ListBoxItem selectedItem = (ListBoxItem)list.SelectedItem;
             if (selectedItem != null)
             {
-                if (selectedItem.Name == itemSpecializationControl.Name)
-                {
-                    SetPageInFrame(new SpecializationControlPage());
-                }
-                else if (selectedItem.Name == itemDoctorsControl.Name)
+                if (selectedItem.Name == itemDoctorsControl.Name)
                 {
                     SetPageInFrame(new DoctorsControlPage());
                 }
