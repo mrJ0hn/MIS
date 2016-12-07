@@ -58,7 +58,17 @@
             </Grid>
         </StackPanel>
 
-        <ListView Grid.Column="0" Style="{StaticResource ListView}"/>
+        <Grid Grid.Column="0" >
+            <GroupBox Margin="10" FontSize="16" FontWeight="Bold"
+                  >
+                <GroupBox.Header>
+                    Mindcracker Network
+                </GroupBox.Header>
+
+                <ListView Grid.Column="0" Style="{StaticResource ListView}"/>
+            </GroupBox>
+        </Grid>
+        <!--<ListView Grid.Column="0" Style="{StaticResource ListView}"/>-->
     </Grid>
 
 </controls:MetroWindow>
