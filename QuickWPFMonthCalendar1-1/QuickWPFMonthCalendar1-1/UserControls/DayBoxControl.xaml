@@ -7,7 +7,7 @@
         <ResourceDictionary>
             <LinearGradientBrush x:Key="BlueGradientBrush" EndPoint="0,1" StartPoint="0,0">
                 <GradientStop Color="#E0F2F1" Offset="0"/>
-                <GradientStop Color="#80cbc4" Offset="0.987"/>
+                <GradientStop Color="#3bdcda" Offset="0.987"/>
                 <GradientStop Color="#b2dfdb" Offset="0.535"/>
             </LinearGradientBrush>
         </ResourceDictionary>

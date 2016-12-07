@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.RowSpan="2">
-                <GroupBox Margin="10" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Background="#015c65" BorderBrush="#015c65">
+                <GroupBox Margin="10" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold">
                     <GroupBox.Header>
                         Сотрудники
                     </GroupBox.Header>

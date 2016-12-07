@@ -21,7 +21,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
+        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="*"/>
                 <DataGridTextColumn Header="Имя" Width="*"/>
@@ -69,7 +69,7 @@
 
         <Border Grid.Column="1" Grid.RowSpan="2" Background="#015c65" BorderBrush="#015c65" BorderThickness="2,0,0,0"/>
 
-        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
+        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Специализации" Width="*"/>
             </DataGrid.Columns>

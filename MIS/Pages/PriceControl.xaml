@@ -12,7 +12,7 @@
 
     <Grid Background="#50e4ebec">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="1.5*"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="auto"/>
@@ -22,7 +22,7 @@
                 <RowDefinition Height="1.8*"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <DataGrid x:Name="gridPrice" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
+            <DataGrid x:Name="gridPrice" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Наименование услуги" Width="*"/>
                     <DataGridTextColumn Header="Стоимость" Width="*"/>
@@ -75,7 +75,7 @@
                     <RowDefinition Height="1.8*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <DataGrid  Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
+                <DataGrid  Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Наменования отделений" Width="*"/>
                     </DataGrid.Columns>
@@ -99,10 +99,10 @@
             <Border Grid.Row="1" VerticalAlignment="Stretch" BorderThickness="0,2,0,0" BorderBrush="#015c65"/>
             <Grid Grid.Row="2">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="1.8*"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <DataGrid  Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
+                <DataGrid  Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Отделение" Width="*"/>
                         <DataGridTextColumn Header="Группа" Width="*"/>
