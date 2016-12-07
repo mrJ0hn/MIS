@@ -58,7 +58,7 @@
             </Grid>
         </StackPanel>
 
-        <ListView Grid.Row="1" Style="{StaticResource ListView}"/>
+        <ListView Grid.Column="0" Style="{StaticResource ListView}"/>
     </Grid>
 
 </controls:MetroWindow>

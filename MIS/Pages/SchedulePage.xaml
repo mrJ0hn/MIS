@@ -49,7 +49,7 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="100"/>
+                <ColumnDefinition Width="130"/>
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
@@ -61,10 +61,10 @@
                 <Label Style="{StaticResource SecondTitleLabel}" Content="{x:Static res:Resources.LabelShedule}"/>
             </Border>
             <Button x:Name="btnNewVisitor" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top"
-                            Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="110" Height="75" Background="White" BorderBrush="White">
+                            Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="130" Height="85" Background="White" BorderBrush="White">
                 <StackPanel>
                     <Image Source="..//..//Pictures/AddClient.png" Height="45"/>
-                    <Label Foreground="#015c65" FontSize="11" HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" />
+                    <Label Foreground="#015c65" FontSize="15" HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" />
                 </StackPanel>
             </Button>
             <!--<Grid Grid.Row="1">
