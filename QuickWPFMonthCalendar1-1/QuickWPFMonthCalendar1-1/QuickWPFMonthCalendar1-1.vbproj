@@ -199,5 +199,8 @@
   <ItemGroup>
     <Resource Include="Images\ForwardGreen.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\ForwardGreen2.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>

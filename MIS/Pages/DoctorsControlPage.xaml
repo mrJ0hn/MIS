@@ -1,4 +1,4 @@
-﻿<Page x:Class="MIS.Pages.DoctorsControlPage"
+<Page x:Class="MIS.Pages.DoctorsControlPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -10,18 +10,18 @@
       d:DesignHeight="900" d:DesignWidth="1000"
       Title="DoctorsControlPage">
 
-    <Grid>
+    <Grid Background="#50e4ebec" >
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="1.8*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="auto"/>
-        </Grid.ColumnDefinitions>
-        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="Gray" BorderThickness="0,0.5">
+
+        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="*"/>
                 <DataGridTextColumn Header="Имя" Width="*"/>
@@ -29,7 +29,7 @@
                 <DataGridTextColumn Header="Специализация" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid Margin="30,10" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top">
+        <Grid Margin="20,0" Grid.Row="1" Grid.Column="0" VerticalAlignment="Top">
             <Grid.RowDefinitions>
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="40"/>
@@ -37,44 +37,47 @@
                 <RowDefinition Height="40"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
+
+            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"
+                   HorizontalAlignment="Stretch"/>
             <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" />
 
-            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
+            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"
+                  HorizontalAlignment="Stretch"/>
             <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
 
-            <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
+            <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"
+                    HorizontalAlignment="Stretch"/>
             <TextBox  Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
 
-            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
+            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"
+                  HorizontalAlignment="Stretch"/>
             <!--<ComboBox Grid.Column="1" Grid.Row="3" VerticalAlignment="Center" Style="{StaticResource ComboBox}"/>-->
 
             <controls:DropDownButton  Grid.Column="1" Grid.Row="3"
                                       x:Name="comboBoxSpecialization"
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
-                                      Height="30"/>
-
-            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" HorizontalAlignment="Right"
-                     Margin="0,20,0,0"/>
+                                      Height="30">
+            </controls:DropDownButton>
+            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" HorizontalAlignment="Right" Margin="0,10,0,0"/> 
         </Grid>
 
-        <Border Grid.RowSpan="2" Grid.Column="1" VerticalAlignment="Stretch" BorderThickness="8,0,0,0" BorderBrush="#015c65"/>
-        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="Gray" BorderThickness="0,0.5">
+        <Border Grid.Column="1" Grid.RowSpan="2" Background="#015c65" BorderBrush="#015c65" BorderThickness="2,0,0,0"/>
+
+        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="#015c65" BorderThickness="1,0,1,1" Margin="20,0,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Специализации" Width="*"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Grid Margin="30,10" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top">
+        <Grid Margin="20,0" Grid.Row="1" Grid.Column="2" VerticalAlignment="Top">
             <Grid.RowDefinitions>
-                <RowDefinition/>
                 <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
@@ -82,10 +85,11 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"/>
-            <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
-            <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}"
-                    Width="100" HorizontalAlignment="Right" Margin="0,20,0,0"/>
+            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"
+                   Margin="0,0,10,0"/>
+            <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
+            <Button Grid.Column="1" Grid.Row="1" Content="{x:Static res:Resources.ButtonAdd}" Margin="0,10,0,0"
+                    Height="20" Width="100" HorizontalAlignment="Right" />
         </Grid>
     </Grid>
 </Page>

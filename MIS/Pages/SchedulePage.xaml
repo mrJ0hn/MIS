@@ -46,14 +46,27 @@
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="100"/>
+            </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
-                <RowDefinition Height="0"/>
+                <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" BorderBrush="#015c65" BorderThickness="0,0,0,1">
+
+            <Border Grid.Row="0" Grid.ColumnSpan="2" BorderBrush="#015c65" BorderThickness="0,0,0,1">
                 <Label Style="{StaticResource SecondTitleLabel}" Content="{x:Static res:Resources.LabelShedule}"/>
             </Border>
+            <Button x:Name="btnNewVisitor" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top"
+                            Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="110" Height="75" Background="White" BorderBrush="White">
+                <StackPanel>
+                    <Image Source="..//..//Pictures/AddClient.png" Height="45"/>
+                    <Label Foreground="#015c65" FontSize="11" HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" />
+                </StackPanel>
+            </Button>
             <!--<Grid Grid.Row="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
@@ -88,7 +101,7 @@
                     </StackPanel>
                 </Button>
             </Grid>-->
-            <cal:MonthView Grid.Row="2" 
+            <cal:MonthView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                            x:Name="aptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"
                            DisplayMonthChanged="aptCalendar_DisplayMonthChanged"/>
         </Grid>
