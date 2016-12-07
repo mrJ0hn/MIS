@@ -20,29 +20,34 @@
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Border Grid.Row="0" BorderBrush="#015c65" BorderThickness="0,0,0,1">
-                <Label Style="{StaticResource SecondTitleLabel}" Content="{x:Static res:Resources.LabelWorker}"/>
-            </Border>
-            <ListView
+
+            <Grid Grid.Column="0" Grid.RowSpan="2">
+                <GroupBox Margin="10" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Background="#015c65" BorderBrush="#015c65">
+                    <GroupBox.Header>
+                        Сотрудники
+                    </GroupBox.Header>
+                    <ListView
                 x:Name="listEmployees" Grid.Row="1" VerticalAlignment="Stretch" 
-                BorderBrush="#015c65" BorderThickness="0,0,1,1" HorizontalContentAlignment="Stretch"
+               HorizontalContentAlignment="Stretch"
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="Gray">
-                            <Grid Margin="3" >
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="*"/>
-                                </Grid.RowDefinitions>
-                                <Label VerticalAlignment="Bottom"
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="Gray">
+                                    <Grid Margin="3" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                        </Grid.RowDefinitions>
+                                        <Label VerticalAlignment="Bottom"
                                     Style="{StaticResource ListLabel}" 
                                     HorizontalContentAlignment="Left" 
                                     Content="{Binding FullName}"/>
-                            </Grid>
-                        </Border>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListView>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListView>
+                </GroupBox>
+            </Grid>
         </Grid>
 
         <Grid Grid.Column="1" Grid.Row="1">
@@ -64,7 +69,7 @@
                             Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="130" Height="85" Background="White" BorderBrush="White">
                 <StackPanel>
                     <Image Source="..//..//Pictures/AddClient.png" Height="45"/>
-                    <Label Foreground="#015c65" FontSize="15" HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" />
+                    <Label HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" Style="{StaticResource LabelButton}" FontWeight="Light"/>
                 </StackPanel>
             </Button>
             <!--<Grid Grid.Row="1">
