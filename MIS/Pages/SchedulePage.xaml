@@ -69,7 +69,7 @@
                             Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="130" Height="85" Background="White" BorderBrush="White">
                 <StackPanel>
                     <Image Source="..//..//Pictures/AddClient.png" Height="45"/>
-                    <Label HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" Style="{StaticResource LabelButton}" FontWeight="Light"/>
+                    <Label HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" Style="{StaticResource LabelButton}"/>
                 </StackPanel>
             </Button>
             <cal:MonthView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
