@@ -20,7 +20,7 @@
         
         
 
-            <GroupBox Grid.Column="1" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold">
+            <GroupBox Grid.Column="1" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="0,2,3,0.5">
                 <GroupBox.Header>
                     Новый клиент
                 </GroupBox.Header>
@@ -66,7 +66,7 @@
             </GroupBox>
 
             <Grid Grid.Column="0" >
-            <GroupBox FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold">
+            <GroupBox FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="0,2,3,0.5">
                 <GroupBox.Header>
                     Пациенты
                 </GroupBox.Header>

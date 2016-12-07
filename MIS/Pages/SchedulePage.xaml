@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.RowSpan="2">
-                <GroupBox Margin="10" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold">
+                <GroupBox Margin="5" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold">
                     <GroupBox.Header>
                         Сотрудники
                     </GroupBox.Header>
@@ -32,7 +32,7 @@
                 ScrollViewer.VerticalScrollBarVisibility="Hidden">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="Gray">
+                                <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="#33bcba">
                                     <Grid Margin="3" >
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*"/>
@@ -72,40 +72,6 @@
                     <Label HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" Style="{StaticResource LabelButton}" FontWeight="Light"/>
                 </StackPanel>
             </Button>
-            <!--<Grid Grid.Row="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="40"/>
-                </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="60" />
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition Width="100" />
-                    <ColumnDefinition Width="200" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <Label Style="{StaticResource LabelButton}" Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.LabelDate}" VerticalAlignment="Center"/>
-                <Label Style="{StaticResource LabelButton}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.LabelDoctor}"  VerticalAlignment="Center"/>
-
-                <StackPanel Grid.Column="1" Grid.Row="0" Grid.RowSpan="2" Margin="0,15,0,0">
-                    <DatePicker Focusable="False" />
-                </StackPanel>
-
-                <Label Grid.Column="2" Grid.Row="0" Style="{StaticResource LabelButton}"  Content="Неделя" VerticalAlignment="Center" Margin="40,0,0,0"/>
-                <StackPanel  Grid.Column="3" Grid.Row="0" Orientation="Horizontal">
-                    <Button Content="Назад" Height="20" Width="60" Margin="0,0,15,0" BorderBrush="#015c65"/>
-                    <Button Content="Вперед" Height="20" Width="60" BorderBrush="#015c65"/>
-                </StackPanel>
-
-                <Button x:Name="btnNewVisitor" Grid.Column="4" Grid.Row="0" Grid.RowSpan="2" Style="{StaticResource BtnAddClient}" 
-                            Click="btnNewVisitor_Click" Grid.ColumnSpan="2" HorizontalAlignment="Right" Width="150">
-                    <StackPanel>
-                        <Image Source="..//..//Pictures/AddClient.png" Height="55"/>
-                        <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonAddClient}" Margin="0"/>
-                    </StackPanel>
-                </Button>
-            </Grid>-->
             <cal:MonthView Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"
                            x:Name="aptCalendar" VerticalAlignment="Stretch" VerticalContentAlignment="Stretch" Margin="0,0,1,5"
                            DisplayMonthChanged="aptCalendar_DisplayMonthChanged"/>

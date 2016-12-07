@@ -21,7 +21,7 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
-        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
+        <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="1,1,1,1" Margin="20,5,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Фамилия" Width="*"/>
                 <DataGridTextColumn Header="Имя" Width="*"/>
@@ -67,9 +67,9 @@
             <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" HorizontalAlignment="Right" Margin="0,10,0,0"/> 
         </Grid>
 
-        <Border Grid.Column="1" Grid.RowSpan="2" Background="#015c65" BorderBrush="#015c65" BorderThickness="2,0,0,0"/>
+        <Border Grid.Column="1" Grid.RowSpan="2" Background="#33bcba" BorderBrush="#33bcba" BorderThickness="2,0,0,0"/>
 
-        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="#015c65" BorderThickness="1,1,1,1" Margin="20,5,20,10">
+        <DataGrid x:Name="gridGroup" Grid.Row="0" Grid.Column="2" BorderBrush="#33bcba" BorderThickness="1,1,1,1" Margin="20,5,20,10">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Специализации" Width="*"/>
             </DataGrid.Columns>
