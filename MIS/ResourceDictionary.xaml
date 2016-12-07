@@ -20,7 +20,8 @@
         <Setter Property="Foreground" Value="#015c65"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
-        <Setter Property="Margin" Value="3"/>
+        <Setter Property="Margin" Value="0"/>
+        <Setter Property="FontWeight" Value="DemiBold"/>
     </Style>
     <Style x:Key="Image" TargetType="Image">
         <Setter Property="Height" Value="60"/>
