@@ -63,7 +63,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Model\Client.cs" />
+    <Compile Include="Model\Department.cs" />
     <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Group.cs" />
+    <Compile Include="Model\Service.cs" />
+    <Compile Include="Model\Specialization.cs" />
     <Compile Include="Model\Visitor.cs" />
     <Compile Include="Pages\BlackListControl.xaml.cs">
       <DependentUpon>BlackListControl.xaml</DependentUpon>
