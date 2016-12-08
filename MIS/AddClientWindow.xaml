@@ -7,23 +7,23 @@
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:res="clr-namespace:MIS.Properties"
         mc:Ignorable="d"
-        Title="{x:Static res:Resources.ButtonAddClient}" Height="900" Width="700"
+        Title="{x:Static res:Resources.ButtonAddClient}" Height="700" Width="800"
         WindowStartupLocation="CenterScreen"
         WindowTitleBrush="#015c65"
         BorderThickness="2,0,2,2"
         BorderBrush="#015c65">
 
     <Grid>
-        <!--<Grid.ColumnDefinitions>
+        <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="1.8*"/>
-        </Grid.ColumnDefinitions>-->
-        <Grid.RowDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+        </Grid.ColumnDefinitions>
+        <!--<Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        </Grid.RowDefinitions>-->
 
-        <GroupBox Grid.Row="0" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="15">
+        <GroupBox Grid.Column="1" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="5,10,10,5">
             <GroupBox.Header>
                 Посетитель
             </GroupBox.Header>
@@ -68,7 +68,7 @@
             </Grid>
         </GroupBox>
         
-        <GroupBox Grid.Row="1"  FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="15,0,15,15">
+        <GroupBox Grid.Row="1"  FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="10,10,15,5">
             <GroupBox.Header>
                 Пациенты
             </GroupBox.Header>
