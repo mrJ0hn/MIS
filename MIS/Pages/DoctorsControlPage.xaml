@@ -17,9 +17,10 @@
         </Grid.ColumnDefinitions>
 
 
-        <GroupBox Grid.Column="0" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="5,10,0,5">
+        <GroupBox Grid.Column="0" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="5,10,0,5"
+                  Padding="0">
             <GroupBox.Header>
-                Сотрудники
+                <Label FontSize="13" FontWeight="Light" Foreground="White" Height="25">СОТРУДНИКИ</Label>
             </GroupBox.Header>
             <Grid>
                 <Grid.ColumnDefinitions>
@@ -34,8 +35,7 @@
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-
-                <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" FontSize="12" BorderThickness="1,1,1,1" Margin="0,0,0,10">
+                <DataGrid x:Name="gridDoctors" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" FontSize="12" BorderThickness="0,0,0,1" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Фамилия" Width="*"/>
                         <DataGridTextColumn Header="Имя" Width="*"/>
@@ -43,6 +43,7 @@
                         <DataGridTextColumn Header="Специализация" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
+                
                 <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"
                    HorizontalAlignment="Stretch"/>
                 <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}" />
