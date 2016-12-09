@@ -48,7 +48,7 @@
 
                 <DataGrid x:Name="gridPrice" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                           VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
->>>>>>> d14027375e88476b687ef95bfbd483e32880e392
+>>>>>>> d140273... refactored interace in PriceControl
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Наименование услуги" Width="*"/>
                         <DataGridTextColumn Header="Стоимость" Width="*"/>
@@ -124,7 +124,7 @@
                 <Label Grid.Column="0" Grid.Row="1" Content="Наименование отделения" Style="{StaticResource LabelLine}"/>
                 <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}" />
                 <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"
->>>>>>> d14027375e88476b687ef95bfbd483e32880e392
+>>>>>>> d140273... refactored interace in PriceControl
                      Margin="0,10,5,0"/>
                 </Grid>
             </Grid>

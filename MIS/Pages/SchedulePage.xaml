@@ -22,9 +22,9 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.RowSpan="2">
-                <GroupBox Margin="5" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold">
+                <GroupBox Margin="0" Padding="0">
                     <GroupBox.Header>
-                        Сотрудники
+                        <Label Style="{StaticResource LableGroupBox}" Content="СОТРУДНИКИ"/>
                     </GroupBox.Header>
                     <ListView
                 x:Name="listEmployees" Grid.Row="1" VerticalAlignment="Stretch" 

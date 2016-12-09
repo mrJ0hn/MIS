@@ -26,45 +26,45 @@
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" MaxHeight="600"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <DataGrid x:Name="gridPrice" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
+                <DataGrid x:Name="gridPrice" Grid.Row="0"
                           VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Наименование услуги" Width="*"/>
                         <DataGridTextColumn Header="Стоимость" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Label Grid.Column="0" Grid.Row="1" Content="Отделение" Style="{StaticResource LabelLine}"/>
-                <controls:DropDownButton  Grid.Column="1" Grid.Row="1"
+                <Grid Grid.Row="1" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Grid.Column="0" Grid.Row="0" Content="Отделение" Style="{StaticResource LabelLine}"/>
+                    <controls:DropDownButton  Grid.Column="1" Grid.Row="0"
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
-                                      Height="30" Margin="0,0,5,0"/>
-                <Label Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.Group}" Style="{StaticResource LabelLine}"/>
-                <controls:DropDownButton  Grid.Column="1" Grid.Row="2"
+                                      Height="30"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Group}" Style="{StaticResource LabelLine}"/>
+                    <controls:DropDownButton  Grid.Column="1" Grid.Row="1"
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
-                                      Height="30" Margin="0,0,5,0"/>
-
-                <Label Grid.Column="0" Grid.Row="3" Content="Наименование услуги" Style="{StaticResource LabelLine}"/>
-                <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}" />
-
-                <Label Grid.Column="0" Grid.Row="4" Content="Стоимость" Style="{StaticResource LabelLine}"/>
-                <TextBox Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBox}"/>
-
-                <Button Grid.Column="1" Grid.Row="5" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"
-                     Margin="0,10,5,0"/>
+                                      Height="30" />
+                    <Label Grid.Column="0" Grid.Row="2" Content="Наименование услуги" Style="{StaticResource LabelLine}"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}" />
+                    <Label Grid.Column="0" Grid.Row="3" Content="Стоимость" Style="{StaticResource LabelLine}"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
+                    <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
+                </Grid>
             </Grid>
         </GroupBox>
 
@@ -74,27 +74,30 @@
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-
-                <DataGrid  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
+                <DataGrid  Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Наменования отделений" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
 
-                <Grid></Grid>
-                <Label Grid.Column="0" Grid.Row="1" Content="Наименование отделения" Style="{StaticResource LabelLine}"/>
-                <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}" />
-                <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"
-                     Margin="0,10,5,0"/>
+                <Grid Grid.Row="1" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Content="Наименование отделения" Style="{StaticResource LabelLine}"/>
+                    <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" />
+                    <Button Grid.Column="1" Grid.Row="1" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
+                </Grid>
             </Grid>
         </GroupBox>
 
@@ -104,32 +107,35 @@
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="1.5*"/>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="auto" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <DataGrid  Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0.2,9.8">
+                <DataGrid  Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Отделение" Width="*"/>
                         <DataGridTextColumn Header="Группа" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
-                <Label Grid.Column="0" Grid.Row="1" Content="Отделение" Style="{StaticResource LabelLine}" Margin="0,6.2,0,5.8"/>
-                <controls:DropDownButton  Grid.Column="1" Grid.Row="1"
-                                      
+                <Grid Grid.Row="1" Margin="10">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="0" Grid.Row="0" Content="Отделение" Style="{StaticResource LabelLine}"/>
+                    <controls:DropDownButton  Grid.Column="1" Grid.Row="0"                                     
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
-                                      Height="30" Margin="0,0,5,0"/>
-                <Label Grid.Column="0" Grid.Row="2" Content="Наименование группы" Style="{StaticResource LabelLine}"/>
-                <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
-                <Button Grid.Column="1" Grid.Row="3" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right" Margin="0,10,5,0"/>
+                                      Height="30"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="Наименование группы" Style="{StaticResource LabelLine}"/>
+                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+                    <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
+                </Grid>
             </Grid>
         </GroupBox>
     </Grid>

@@ -23,11 +23,11 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>-->
 
-        <GroupBox Grid.Column="1" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="5,10,10,5">
+        <GroupBox Grid.Column="1" Margin="0" Padding="0">
             <GroupBox.Header>
-                Посетитель
+                <Label Style="{StaticResource LableGroupBox}" Content="ПОСЕТИТЕЛЬ"/>
             </GroupBox.Header>
-            <Grid>
+            <Grid Margin="10">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
@@ -68,11 +68,10 @@
             </Grid>
         </GroupBox>
         
-        <GroupBox Grid.Row="1"  FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold" Margin="10,10,15,5">
+        <GroupBox Grid.Row="1" Margin="0" Padding="0">
             <GroupBox.Header>
-                Пациенты
+                <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
             </GroupBox.Header>
-
             <ListView Grid.Column="0" Style="{StaticResource ListView}"/>
         </GroupBox>
 
