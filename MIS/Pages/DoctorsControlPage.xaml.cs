@@ -1,4 +1,5 @@
-﻿using MIS.Model;
+﻿using MIS.DatabaseDataSetTableAdapters;
+using MIS.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace MIS.Pages
             InitializeComponent();
             listSpecializations = GetSpecialization();
             comboBoxSpecialization.ItemsSource = listSpecializations;
+            gridSpecialization.ItemsSource = new SpecializationTableAdapter().GetData();
         }
         private List<Visitor> GetSpecialization()
         {

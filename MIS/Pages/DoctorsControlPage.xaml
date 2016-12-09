@@ -80,7 +80,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <DataGrid x:Name="gridGroup" Grid.Row="0" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
+                <DataGrid x:Name="gridSpecialization" Grid.Row="0" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Специализации" Width="*"/>
                     </DataGrid.Columns>
