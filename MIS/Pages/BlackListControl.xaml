@@ -6,49 +6,63 @@
       xmlns:local="clr-namespace:MIS.Pages"
       xmlns:res="clr-namespace:MIS.Properties"
       mc:Ignorable="d" 
-      d:DesignHeight="700" d:DesignWidth="500"
+      d:DesignHeight="700" d:DesignWidth="1000"
       Title="BlackListControl">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
-    <StackPanel>
-        <DataGrid x:Name="gridblackList" Height="400" BorderBrush="Gray" BorderThickness="0.5">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="Фамилия" Width="*"/>
-                <DataGridTextColumn Header="Имя" Width="*"/>
-                <DataGridTextColumn Header="Отчество" Width="*"/>
-                <DataGridTextColumn Header="Дата рождения" Width="*"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Grid Margin="10">
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
+        <GroupBox Grid.Column="0" Padding="0" Margin="0">
+            <GroupBox.Header>
+                <Label Style="{StaticResource LableGroupBox}" Content="ДАННЫЕ ПОСЕТИТЕЛИ НАХОДЯТСЯ В ЧЕРНОМ СПИСКЕ"/>
+            </GroupBox.Header>
+            <DataGrid x:Name="gridblackList">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Фамилия" Width="*"/>
+                    <DataGridTextColumn Header="Имя" Width="*"/>
+                    <DataGridTextColumn Header="Отчество" Width="*"/>
+                    <DataGridTextColumn Header="Номер телефона" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
 
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="auto" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="1" Padding="0" Margin="0">
+            <GroupBox.Header>
+                <Label Style="{StaticResource LableGroupBox}" Content="ПОИСК"/>
+            </GroupBox.Header>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
 
-            <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
-            <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
+                <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
+                <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
 
-            <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
-            <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+                <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
 
-            <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
-            <TextBox  Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
+                <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
+                <TextBox  Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
 
-            <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Birthday}" Style="{StaticResource LabelLine}"/>
-            <StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
-                <TextBox Width="70" Style="{StaticResource TextBox}"/>
-                <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
-                <TextBox Width="100" Style="{StaticResource TextBox}"/>
-            </StackPanel>
-            <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Height="20" Width="100" HorizontalAlignment="Right" Margin="0,0,10,0"/>
-        </Grid>
-    </StackPanel>
+                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Phone}" Style="{StaticResource LabelLine}"/>
+                <TextBox  Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
+                <!--<StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
+                        <TextBox Width="70" Style="{StaticResource TextBox}"/>
+                        <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
+                        <TextBox Width="100" Style="{StaticResource TextBox}"/>
+                    </StackPanel>-->
+                <Button Grid.Column="1" Grid.Row="4" Content="Найти" Height="20" Width="100" HorizontalAlignment="Right"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
 </Page>

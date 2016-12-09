@@ -22,7 +22,7 @@
             </Grid.RowDefinitions>
 
             <Grid Grid.Column="0" Grid.RowSpan="2">
-                <GroupBox Margin="0" Padding="0">
+                <GroupBox Margin="0" Padding="0" BorderThickness="0,0,1,1">
                     <GroupBox.Header>
                         <Label Style="{StaticResource LableGroupBox}" Content="СОТРУДНИКИ"/>
                     </GroupBox.Header>
@@ -68,7 +68,7 @@
             <Button x:Name="btnNewVisitor" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top" Style="{StaticResource LeftButtons}"
                             Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="130" Height="85" Background="White" BorderBrush="White">
                 <StackPanel>
-                    <Image Source="..//..//Pictures/AddClient.png" Height="45"/>
+                    <Image Source="..//..//Pictures/AddClient.png" Height="45" RenderTransformOrigin="0.781,0.5"/>
                     <Label HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" Style="{StaticResource LabelButton}"/>
                 </StackPanel>
             </Button>
