@@ -21,7 +21,7 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="FontWeight" Value="DemiBold"/>
-        <Setter Property="Margin" Value="5,0,0,0"/>
+        <Setter Property="Margin" Value="0,0,20,0"/>
     </Style>
     <Style x:Key="Image" TargetType="Image">
         <Setter Property="Height" Value="60"/>
@@ -66,9 +66,10 @@
         <Setter Property="Foreground" Value="#015c65"/>
     </Style>
     <Style x:Key="DataGrid" TargetType="DataGrid">
-        <Setter Property="BorderBrush" Value="#015c65"/>
+        <Setter Property="BorderBrush" Value="#33bcba"/>
+        <Setter Property="BorderThickness" Value="1"/>
         <Setter Property="HorizontalAlignment" Value="Stretch"/>
-        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="FontSize" Value="12"/>
     </Style>
     <Style x:Key="RadioBtn" TargetType="RadioButton">
         <Setter Property="BorderBrush" Value="#015c65"/>
@@ -89,5 +90,8 @@
         <Setter Property="FontWeight" Value="Light"/>
         <Setter Property="Foreground" Value="White"/>
         <Setter Property="Height" Value="25"/>
+    </Style>
+    <Style x:Name="DocumentsFontCheckBox" TargetType="CheckBox">
+        <Setter Property="FontSize" Value="12"/>
     </Style>
 </ResourceDictionary>

@@ -42,5 +42,10 @@ namespace MIS
             frameMain.NavigationService.Navigate(page);
             frameMain.NavigationService.RemoveBackEntry();
         }
+
+        private void btnClientCard_Click(object sender, RoutedEventArgs e)
+        {
+            //new ClientCardWindow().Show();
+        }
     }
 }
