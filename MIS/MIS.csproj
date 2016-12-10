@@ -79,7 +79,8 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controllers\ControlSpecialization.cs" />
+    <Compile Include="Controllers\ControlEmployees.cs" />
+    <Compile Include="Controllers\ControlSpecializations.cs" />
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
     </Compile>
@@ -90,7 +91,7 @@
     </Compile>
     <Compile Include="Model\Client.cs" />
     <Compile Include="Model\Department.cs" />
-    <Compile Include="Model\Employees.cs" />
+    <Compile Include="Model\Employee.cs" />
     <Compile Include="Model\Group.cs" />
     <Compile Include="Model\Service.cs" />
     <Compile Include="Model\Specialization.cs" />
@@ -120,19 +121,12 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="CustomControl\CustomCalendar.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
     <Compile Include="AddClientWindow.xaml.cs">
       <DependentUpon>AddClientWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CustomControl\CustomCalendar.xaml.cs">
-      <DependentUpon>CustomCalendar.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -258,10 +252,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DataBase.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="DataBase_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <DependentUpon>DataBase.mdf</DependentUpon>
     </Content>
   </ItemGroup>
