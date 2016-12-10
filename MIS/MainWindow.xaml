@@ -26,9 +26,9 @@
                             <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonSchedule}"/>
                         </StackPanel>
                     </Button>
-                    <Button x:Name="btnClientCard" Style="{StaticResource LeftButtons}" Click="btnClientCard_Click">
+                    <Button x:Name="btnPatientControl" Style="{StaticResource LeftButtons}" Click="btnPatientControl_Click">
                         <StackPanel>
-                            <Image  Style="{StaticResource Image}" Source="Pictures/People.png"/>
+                            <Image  Style="{StaticResource Image}" Source="Pictures/People.png" RenderTransformOrigin="0.54,0.5"/>
                             <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonPatient}"/>
                         </StackPanel>
                     </Button>

@@ -43,9 +43,9 @@ namespace MIS
             frameMain.NavigationService.RemoveBackEntry();
         }
 
-        private void btnClientCard_Click(object sender, RoutedEventArgs e)
+        private void btnPatientControl_Click(object sender, RoutedEventArgs e)
         {
-            //new ClientCardWindow().Show();
+            SetPageInMainFrame(new Pages.PatientPageControl());
         }
     }
 }

@@ -193,7 +193,7 @@
     <value>Врач</value>
   </data>
   <data name="LabelPrice" xml:space="preserve">
-    <value>Прайс</value>
+    <value>Прейскурант</value>
   </data>
   <data name="LabelShedule" xml:space="preserve">
     <value>Расписание на неделю</value>

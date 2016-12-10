@@ -286,7 +286,7 @@ namespace MIS.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Прайс.
+        ///   Ищет локализованную строку, похожую на Прейскурант.
         /// </summary>
         public static string LabelPrice {
             get {
