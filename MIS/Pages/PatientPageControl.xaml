@@ -16,15 +16,15 @@
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
                 </Grid.ColumnDefinitions>
                 <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource TextBox}" Margin="10"/>
-                <Button Grid.Row="0" Grid.Column="1" Content="Найти" Height="20" Width="100"/>
+                <Button Grid.Row="0" Grid.Column="1" Content="Найти" Height="20" Width="100" Margin="0,0,10,0"/>
                 <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="12" BorderBrush="#33bcba" BorderThickness="1" Margin="10,0,10,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*"/>
