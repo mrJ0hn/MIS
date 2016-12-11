@@ -25,20 +25,23 @@
                     <RowDefinition Height="2.1*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid.Resources>
-                    <ContextMenu x:Key="DataRowContextMenu">
-                        <MenuItem Header="Удалить" Click="menuItemRemoveEmployee_Click">
-                            <MenuItem.Icon>
-                                <Image Height="15" Width="15" Source="..//../Pictures/Icon.png"/>
-                            </MenuItem.Icon>
-                        </MenuItem>
-                    </ContextMenu>
-                    <Style TargetType="{x:Type DataGridCell}">
-                        <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
-                    </Style>
-                </Grid.Resources>
-                <DataGrid x:Name="gridEmployee" Grid.Row="0" BorderBrush="#33bcba" FontSize="10" BorderThickness="0,0,0,1" Margin="0,0,0,10"
-                           AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid x:Name="gridEmployee" Grid.Row="0" BorderBrush="#33bcba" 
+                          FontSize="10" BorderThickness="0,0,0,1" Margin="0,0,0,10"
+                          AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#33bcba"/>
+                        <ContextMenu x:Key="DataRowContextMenu">
+                            <MenuItem Header="Удалить" Click="menuItemRemoveEmployee_Click">
+                                <MenuItem.Icon>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Icon.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
+                        </Style>
+                    </DataGrid.Resources>
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" Width="*" FontSize="16"/>
                         <DataGridTextColumn Header="Имя" Binding="{Binding Path=FirstName}" Width="*" FontSize="16"/>
@@ -78,7 +81,6 @@
                               SelectedValuePath="Name"
                               FontSize="16"
                               Height="30"/>
-
                     <Button x:Name="btnAddEmployee"  Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}"
                         Width="100" Height="20" HorizontalAlignment="Right" Click="btnAddEmployee_Click"/>
                 </Grid>
@@ -94,20 +96,20 @@
                     <RowDefinition Height="2.1*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Grid.Resources>
-                    <ContextMenu x:Key="DataRowContextMenu">
-                        <MenuItem Header="Удалить" Click="menuItemRemoveSpecialization_Click">
-                            <MenuItem.Icon>
-                                <Image Height="15" Width="15" Source="..//../Pictures/Icon.png"/>
-                            </MenuItem.Icon>
-                        </MenuItem>
-                    </ContextMenu>
-                    <Style TargetType="{x:Type DataGridCell}">
-                        <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
-                    </Style>
-                </Grid.Resources>
                 <DataGrid x:Name="gridSpecialization" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True"
                           BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
+                    <DataGrid.Resources>
+                        <ContextMenu x:Key="DataRowContextMenu">
+                            <MenuItem Header="Удалить" Click="menuItemRemoveSpecialization_Click">
+                                <MenuItem.Icon>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Icon.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
+                        </Style>
+                    </DataGrid.Resources>
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Специализации" Binding="{Binding Path=Name}" Width="*" FontSize="16"/>
                     </DataGrid.Columns>

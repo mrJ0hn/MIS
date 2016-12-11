@@ -10,12 +10,10 @@ namespace MIS.Model
     {
         public int Id { get; private set; }
         public string Name { get; private set; }
-
         public Specialization(string name)
         {
             Name = name;
         }
-
         public Specialization(int id, string name)
         {
             Id = id;
