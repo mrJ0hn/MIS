@@ -11,11 +11,12 @@
         WindowState="Maximized">
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="120*"/>
+            <ColumnDefinition Width="577*"/>
+            <ColumnDefinition Width="697*"/>
         </Grid.ColumnDefinitions>
 
-        <GroupBox Grid.Column="0" Grid.RowSpan="2" Padding="0" Margin="0">
+        <GroupBox Grid.Column="0" Padding="0" Margin="0,0,696.6,0.4" Grid.ColumnSpan="3">
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="КАРТА ПОСЕТИТЕЛЯ"/>
             </GroupBox.Header>
@@ -59,7 +60,7 @@
             </Grid>
         </GroupBox>
 
-        <GroupBox Grid.Column="1" Padding="0" Margin="0">
+        <GroupBox Grid.Column="2" Padding="0" Margin="0.2,0,-0.4,0.4">
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="КАРТА КЛИЕНТА"/>
             </GroupBox.Header>

@@ -10,30 +10,57 @@
       Title="PatientPageControl">
 
     <Grid>
-        <GroupBox Padding="0" Margin="0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Grid.Column="0" Padding="0" Margin="0">
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
             </GroupBox.Header>
-            <Grid>
+            <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.MiddleName}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Birthday}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Phone}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+        <GroupBox Grid.Column="1" Padding="0" Margin="0">
+            <GroupBox.Header>
+                <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
+            </GroupBox.Header>
+            <Grid Margin="10">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="60"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
-                <TextBox Grid.Row="0" Grid.Column="0" Style="{StaticResource TextBox}" Margin="10"/>
-                <Button Grid.Row="0" Grid.Column="1" Content="Найти" Height="20" Width="100" Margin="0,0,10,0"/>
-                <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" FontSize="12" BorderBrush="#33bcba" BorderThickness="1" Margin="10,0,10,10">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.MiddleName}" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.Birthday}" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.Phone}" Width="*"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"/>
+                <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
+
+                <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"/>
+                <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+
+                <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
+                <TextBox  Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
+
+                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Birthday}" Style="{StaticResource LabelLine}"/>
+                <TextBox  Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
+
+                <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.Phone}" Style="{StaticResource LabelLine}"/>
+                <TextBox  Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBox}"/>
+
+                <Button Grid.Row="5" Grid.Column="1" Content="Найти" Height="20" Width="100" HorizontalAlignment="Right"/>
             </Grid>
         </GroupBox>
     </Grid>

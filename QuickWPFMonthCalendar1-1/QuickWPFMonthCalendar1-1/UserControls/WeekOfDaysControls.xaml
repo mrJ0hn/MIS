@@ -5,7 +5,7 @@
     MinWidth="280" MinHeight="60">
     <Grid x:Name="WeekRowGrid">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="16"/>
+            <ColumnDefinition Width="14"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>

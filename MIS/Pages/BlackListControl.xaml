@@ -18,7 +18,7 @@
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="ДАННЫЕ ПОСЕТИТЕЛИ НАХОДЯТСЯ В ЧЕРНОМ СПИСКЕ"/>
             </GroupBox.Header>
-            <DataGrid x:Name="gridblackList">
+            <DataGrid x:Name="gridblackList" FontSize="10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="Фамилия" Width="*"/>
                     <DataGridTextColumn Header="Имя" Width="*"/>

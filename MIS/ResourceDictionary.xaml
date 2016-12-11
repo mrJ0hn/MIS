@@ -5,13 +5,13 @@
 
     <Style x:Key="LeftButtons" TargetType="Button">
         <Setter Property="Width" Value="auto"/>
-        <Setter Property="Height" Value="90"/>
+        <Setter Property="Height" Value="70"/>
         <Setter Property="Background" Value="#e4ebec"/>
         <Setter Property="BorderBrush" Value="#e4ebec"/>
     </Style>
     <Style x:Key="LabelButton" TargetType="Label">
         <Setter Property="FontFamily" Value="Myriad Pro"/>
-        <Setter Property="FontSize" Value="15"/>
+        <Setter Property="FontSize" Value="13"/>
         <Setter Property="Foreground" Value="#015c65"/>
     </Style>
     <Style x:Key="LabelLine" TargetType="Label" >
@@ -24,7 +24,7 @@
         <Setter Property="Margin" Value="0,0,20,0"/>
     </Style>
     <Style x:Key="Image" TargetType="Image">
-        <Setter Property="Height" Value="60"/>
+        <Setter Property="Height" Value="45"/>
     </Style>
     <Style x:Key="TitleLabel" TargetType="Label">
         <Setter Property="FontFamily" Value="Myriad Pro"/>
@@ -33,7 +33,7 @@
     </Style>
     <Style x:Key="SecondTitleLabel" TargetType="Label">
         <Setter Property="FontFamily" Value="BodoniNovaNr"/>
-        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="FontSize" Value="15"/>
         <Setter Property="Foreground" Value="#015c65"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>

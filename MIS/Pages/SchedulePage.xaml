@@ -11,11 +11,11 @@
       Title="SchedulePage">
     <Grid Grid.Column="1" Grid.Row="1" Background="White">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="220"/>
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <Grid Grid.Column="0" Margin="0,0,15,0">
+        <Grid Grid.Column="0" Margin="0,0,5,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="auto"/>
                 <RowDefinition Height="*"/>
@@ -40,7 +40,8 @@
                                         <Label VerticalAlignment="Bottom"
                                     Style="{StaticResource ListLabel}" 
                                     HorizontalContentAlignment="Left" 
-                                    Content="{Binding FullName}"/>
+                                    Content="{Binding FullName}"
+                                               FontSize="12"/>
                                     </Grid>
                                 </Border>
                             </DataTemplate>
@@ -66,9 +67,9 @@
                 <Label Style="{StaticResource SecondTitleLabel}" Content="{x:Static res:Resources.LabelShedule}"/>
             </Border>
             <Button x:Name="btnNewVisitor" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalAlignment="Top" Style="{StaticResource LeftButtons}"
-                            Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="130" Height="85" Background="White" BorderBrush="White">
+                            Click="btnNewVisitor_Click" HorizontalAlignment="Right" Width="95" Height="70" Background="White" BorderBrush="White">
                 <StackPanel>
-                    <Image Source="..//..//Pictures/AddClient.png" Height="45" RenderTransformOrigin="0.781,0.5"/>
+                    <Image Source="..//..//Pictures/AddClient.png" Height="45"/>
                     <Label HorizontalAlignment="Center" Content="{x:Static res:Resources.ButtonAddClient}" Style="{StaticResource LabelButton}"/>
                 </StackPanel>
             </Button>

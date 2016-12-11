@@ -37,7 +37,7 @@
                         <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
                     </Style>
                 </Grid.Resources>
-                <DataGrid x:Name="gridEmployee" Grid.Row="0" BorderBrush="#33bcba" FontSize="12" BorderThickness="0,0,0,1" Margin="0,0,0,10"
+                <DataGrid x:Name="gridEmployee" Grid.Row="0" BorderBrush="#33bcba" FontSize="10" BorderThickness="0,0,0,1" Margin="0,0,0,10"
                            AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" Width="*" FontSize="16"/>
@@ -107,7 +107,7 @@
                     </Style>
                 </Grid.Resources>
                 <DataGrid x:Name="gridSpecialization" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True"
-                          BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
+                          BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Специализации" Binding="{Binding Path=Name}" Width="*" FontSize="16"/>
                     </DataGrid.Columns>

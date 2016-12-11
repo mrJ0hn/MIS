@@ -15,7 +15,7 @@
     <Border BorderBrush="#015c65" BorderThickness="0.5,0,0.5,0.5">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="100" />
+                <ColumnDefinition Width="auto" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <Border Grid.Column="0" BorderBrush="#015c65" BorderThickness="0,0,1,0">
@@ -28,7 +28,7 @@
                     </Button>
                     <Button x:Name="btnPatientControl" Style="{StaticResource LeftButtons}" Click="btnPatientControl_Click">
                         <StackPanel>
-                            <Image  Style="{StaticResource Image}" Source="Pictures/People.png" RenderTransformOrigin="0.54,0.5"/>
+                            <Image  Style="{StaticResource Image}" Source="Pictures/People.png"/>
                             <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonPatient}"/>
                         </StackPanel>
                     </Button>

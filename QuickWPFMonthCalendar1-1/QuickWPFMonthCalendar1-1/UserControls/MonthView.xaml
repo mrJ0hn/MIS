@@ -16,23 +16,23 @@
 
     <Grid VerticalAlignment="Stretch">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="35"/>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <StackPanel Orientation="Horizontal" Background="AliceBlue" Margin="0,10,0,0">
-            <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="30" Click="MonthGoPrev_MouseLeftButtonUp" Margin="5,0">
+            <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="25" Click="MonthGoPrev_MouseLeftButtonUp" Margin="5,0">
                 <Image x:Name="MonthGoPrev" Source="..//../Images/ForwardGreen2.png"/>
             </Button>
-            <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="30" Click="MonthGoNext_MouseLeftButtonUp">
+            <Button Style="{DynamicResource MetroCircleButtonStyle}" Height="25" Click="MonthGoNext_MouseLeftButtonUp">
                 <Image Name="MonthGoNext" Source="..//../Images/ForwardGreen.png"/>
             </Button>
-            <Label x:Name="MonthYearLabel" Content="March 2009" FontSize="16" FontFamily="BodoniNovaNr" FontWeight="DemiBold"
+            <Label x:Name="MonthYearLabel" Content="March 2009" FontSize="14" FontFamily="BodoniNovaNr" FontWeight="DemiBold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
         </StackPanel>
         <Grid Grid.Row="1" Background="AliceBlue" Margin="0,0,0,5">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="20"/>
+                <ColumnDefinition Width="18"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
@@ -44,7 +44,7 @@
 
             <Grid.Resources>
                 <Style TargetType="Label">
-                    <Setter Property="FontSize" Value="15"/>
+                    <Setter Property="FontSize" Value="13"/>
                     <Setter Property="Margin" Value="2,0,0,2"/>
                     <Setter Property="HorizontalAlignment" Value="Center"/>
                     <Setter Property="VerticalAlignment" Value="Center"/>

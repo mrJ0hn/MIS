@@ -30,7 +30,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <DataGrid x:Name="gridPrice" Grid.Row="0"
-                          VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
+                          VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Наименование услуги" Width="*"/>
                         <DataGridTextColumn Header="Стоимость" Width="*"/>
@@ -78,7 +78,7 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <DataGrid  Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
+                <DataGrid  Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Наменования отделений" Width="*"/>
                     </DataGrid.Columns>
@@ -110,7 +110,7 @@
                     <RowDefinition Height="1.5*"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <DataGrid  Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="12" Margin="0,0,0,10">
+                <DataGrid  Grid.Row="0" VerticalAlignment="Stretch" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
                     <DataGrid.Columns>
                         <DataGridTextColumn Header="Отделение" Width="*"/>
                         <DataGridTextColumn Header="Группа" Width="*"/>
