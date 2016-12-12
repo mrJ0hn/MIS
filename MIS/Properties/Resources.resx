@@ -123,6 +123,12 @@
   <data name="AddressPropisre" xml:space="preserve">
     <value>Адрес прописки</value>
   </data>
+  <data name="AddSpecailization" xml:space="preserve">
+    <value>ДОБАВЛЕНИЕ СПЕЦИАЛИЗАЦИИ</value>
+  </data>
+  <data name="AgreementServices" xml:space="preserve">
+    <value>Cогласие на оказание услуг стоматолога-ортопеда</value>
+  </data>
   <data name="Birthday" xml:space="preserve">
     <value>Дата рождения</value>
   </data>
@@ -156,8 +162,44 @@
   <data name="ButtonStatistics" xml:space="preserve">
     <value>Статистика</value>
   </data>
+  <data name="CameReception" xml:space="preserve">
+    <value>Пришел на прием</value>
+  </data>
+  <data name="CameReceptionAgain" xml:space="preserve">
+    <value>Пришел на прием повторно</value>
+  </data>
+  <data name="CameReceptionWarranty" xml:space="preserve">
+    <value>Пришел на прием по гарантии</value>
+  </data>
+  <data name="CardClient" xml:space="preserve">
+    <value>КАРТА КЛИЕНТА</value>
+  </data>
+  <data name="CardVisitor" xml:space="preserve">
+    <value>КАРТА ПОСЕТИТЕЛЯ</value>
+  </data>
+  <data name="Comments" xml:space="preserve">
+    <value>Комментарий</value>
+  </data>
+  <data name="ConsentPatient" xml:space="preserve">
+    <value>Согласие пациента</value>
+  </data>
+  <data name="ConsertPerfom" xml:space="preserve">
+    <value>Cогласие на выполнение медицинского вмешательства</value>
+  </data>
+  <data name="ContractPaidDentist" xml:space="preserve">
+    <value>Договор на оказание платных стоматологических услуг</value>
+  </data>
+  <data name="ContractPaidMedical" xml:space="preserve">
+    <value>Договор на оказание платных медицинских услуг</value>
+  </data>
   <data name="Cost" xml:space="preserve">
     <value>Стоимость</value>
+  </data>
+  <data name="Del" xml:space="preserve">
+    <value>Удалить</value>
+  </data>
+  <data name="Department" xml:space="preserve">
+    <value>Отделение</value>
   </data>
   <data name="Discount" xml:space="preserve">
     <value>Скидка</value>
@@ -168,6 +210,9 @@
   <data name="DoctorsControl" xml:space="preserve">
     <value>Сотрудники</value>
   </data>
+  <data name="Employee" xml:space="preserve">
+    <value>СОТРУДНИКИ</value>
+  </data>
   <data name="Error" xml:space="preserve">
     <value>Ошибка</value>
   </data>
@@ -176,6 +221,9 @@
   </data>
   <data name="FillInAllTheFields" xml:space="preserve">
     <value>Пожалуйста, заполните все поля</value>
+  </data>
+  <data name="Find" xml:space="preserve">
+    <value>Найти</value>
   </data>
   <data name="FirstName" xml:space="preserve">
     <value>Имя</value>
@@ -207,6 +255,9 @@
   <data name="LabelWorker" xml:space="preserve">
     <value>Сотрудники</value>
   </data>
+  <data name="MailCardPatient" xml:space="preserve">
+    <value>Основная карта посетителя</value>
+  </data>
   <data name="Male" xml:space="preserve">
     <value>Мужской</value>
   </data>
@@ -219,8 +270,17 @@
   <data name="NameCompany" xml:space="preserve">
     <value>Архангельская медицинская компания</value>
   </data>
+  <data name="NameGroup" xml:space="preserve">
+    <value>Наименование группы</value>
+  </data>
+  <data name="NameService" xml:space="preserve">
+    <value>Наименование услуги</value>
+  </data>
   <data name="Passport" xml:space="preserve">
     <value>Паспорт</value>
+  </data>
+  <data name="Patients" xml:space="preserve">
+    <value>ПАЦИЕНТЫ</value>
   </data>
   <data name="Phone" xml:space="preserve">
     <value>Номер телефона</value>
@@ -228,14 +288,23 @@
   <data name="Pol" xml:space="preserve">
     <value>Пол</value>
   </data>
+  <data name="PriceList" xml:space="preserve">
+    <value>ПРЕЙСКУРАНТ</value>
+  </data>
   <data name="Print" xml:space="preserve">
     <value>Печать</value>
+  </data>
+  <data name="ProvidedServices" xml:space="preserve">
+    <value>ОКАЗАННЫЕ УСЛУГИ</value>
   </data>
   <data name="ProvideService" xml:space="preserve">
     <value>Оказанные услуги</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Сохранить</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>ПОИСК</value>
   </data>
   <data name="Seria" xml:space="preserve">
     <value>Серия</value>
@@ -254,6 +323,18 @@
   </data>
   <data name="Time" xml:space="preserve">
     <value>Время</value>
+  </data>
+  <data name="TitleDepartment" xml:space="preserve">
+    <value>ОТДЕЛЕНИЕ</value>
+  </data>
+  <data name="TitleGroups" xml:space="preserve">
+    <value>ГРУППЫ</value>
+  </data>
+  <data name="TitleVisit" xml:space="preserve">
+    <value>ПОСЕТИТЕЛЬ</value>
+  </data>
+  <data name="VisitAreBlackList" xml:space="preserve">
+    <value>ДАННЫЕ ПОСЕТИТЕЛИ НАХОДЯТСЯ В ЧЕРНОМ СПИСКЕ</value>
   </data>
   <data name="WhenIssued" xml:space="preserve">
     <value>Когда выдан</value>

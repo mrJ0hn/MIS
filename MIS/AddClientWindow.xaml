@@ -26,7 +26,7 @@
 
         <GroupBox Grid.Column="0" Margin="0" Padding="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПОСЕТИТЕЛЬ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.TitleVisit}"/>
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.RowDefinitions>
@@ -53,7 +53,7 @@
                 <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.LabelDate}" Style="{StaticResource LabelLine}"/>
                 <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.Time}" Style="{StaticResource LabelLine}"/>
                 <Label Grid.Column="0" Grid.Row="6" Content="{x:Static res:Resources.LabelDoctor}" Style="{StaticResource LabelLine}"/>
-                <Label Grid.Column="0" Grid.Row="7" Content="Комментарий" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="7" Content="{x:Static res:Resources.Comments}" Style="{StaticResource LabelLine}"/>
 
                 <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
@@ -75,7 +75,7 @@
         
         <GroupBox Grid.Column="1" Margin="0" Padding="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Patients}"/>
             </GroupBox.Header>
             <ListView Grid.Column="0" Style="{StaticResource ListView}"/>
         </GroupBox>

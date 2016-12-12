@@ -20,15 +20,15 @@
 
         <GroupBox Grid.Column="0" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ОКАЗАННЫЕ УСЛУГИ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.ProvidedServices}"/>
             </GroupBox.Header>
             <DataGrid x:Name="gridPrice" FontSize="10" 
                       BorderBrush="#33bcba" BorderThickness="0"
                       AutoGenerateColumns="False" IsReadOnly="True">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Отделение" Width="*"/>
-                    <DataGridTextColumn Header="Группа" Width="*"/>
-                    <DataGridTextColumn Header="Наименование услуги" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Department}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Group}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.NameService}" Width="*"/>
                     <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -36,7 +36,7 @@
 
         <GroupBox Grid.Column="1" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПОИСК"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Search}"/>
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.ColumnDefinitions>
@@ -51,9 +51,9 @@
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
-                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="0" Content="Отделние"/>
+                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Department}"/>
                 <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Group}"/>
-                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="2" Content="Наименование услуги"/>
+                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.NameService}"/>
                 <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Cost}"/>
                 <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.ButtonSearch}" Style="{StaticResource LabelLine}"/>
                 <ComboBox Grid.Column="1" Grid.Row="0"

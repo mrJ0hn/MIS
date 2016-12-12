@@ -22,7 +22,7 @@
 
         <GroupBox Grid.Column="0" Grid.RowSpan="2" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПРЕЙСКУРАНТ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.PriceList}"/>
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
@@ -34,9 +34,9 @@
                           BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10"
                           AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Отделение" Width="auto"/>
-                        <DataGridTextColumn Header="Группа" Width="auto"/>
-                        <DataGridTextColumn Header="Наименование услуги" Width="*"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Department}" Width="auto"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Group}" Width="auto"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.NameService}" Width="*"/>
                         <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="auto"/>
                     </DataGrid.Columns>
                 </DataGrid>
@@ -53,7 +53,7 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
-                    <Label Grid.Column="0" Grid.Row="0" Content="Отделение" Style="{StaticResource LabelLine}"/>
+                    <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Department}" Style="{StaticResource LabelLine}"/>
                     <controls:DropDownButton  Grid.Column="1" Grid.Row="0"
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
@@ -63,9 +63,9 @@
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
                                       Height="30" />
-                    <Label Grid.Column="0" Grid.Row="2" Content="Наименование услуги" Style="{StaticResource LabelLine}"/>
+                    <Label Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.NameService}" Style="{StaticResource LabelLine}"/>
                     <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}" />
-                    <Label Grid.Column="0" Grid.Row="3" Content="Стоимость" Style="{StaticResource LabelLine}"/>
+                    <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Cost}" Style="{StaticResource LabelLine}"/>
                     <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
                     <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
                 </Grid>
@@ -86,7 +86,7 @@
                           BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" 
                           Margin="0,0,0,10" AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Наменования отделений" Width="*"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.TitleDepartment}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
 
@@ -100,7 +100,7 @@
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Grid.Row="0" Content="Наименование отделения" Style="{StaticResource LabelLine}"/>
+                    <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.NameService}" Style="{StaticResource LabelLine}"/>
                     <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" />
                     <Button Grid.Column="1" Grid.Row="1" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
                 </Grid>
@@ -109,7 +109,7 @@
 
         <GroupBox Grid.Column="1" Grid.Row="1" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ГРУППЫ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.TitleGroups}"/>
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
@@ -120,8 +120,8 @@
                           BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10"
                           AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Отделение" Width="*"/>
-                        <DataGridTextColumn Header="Группа" Width="*"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Department}" Width="*"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Group}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">
@@ -135,12 +135,12 @@
                         <ColumnDefinition Width="auto" />
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <Label Grid.Column="0" Grid.Row="0" Content="Отделение" Style="{StaticResource LabelLine}"/>
+                    <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Department}" Style="{StaticResource LabelLine}"/>
                     <controls:DropDownButton  Grid.Column="1" Grid.Row="0"                                     
                                       HorizontalContentAlignment="Left"
                                       DisplayMemberPath="FullName"
                                       Height="30"/>
-                    <Label Grid.Column="0" Grid.Row="1" Content="Наименование группы" Style="{StaticResource LabelLine}"/>
+                    <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.NameGroup}" Style="{StaticResource LabelLine}"/>
                     <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
                     <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
                 </Grid>

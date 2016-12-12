@@ -18,7 +18,7 @@
 
         <GroupBox Grid.Column="0" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="СОТРУДНИКИ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Employee}"/>
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
@@ -32,7 +32,7 @@
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#33bcba"/>
                         <ContextMenu x:Key="DataRowContextMenu">
-                            <MenuItem Header="Удалить" Click="menuItemRemoveEmployee_Click" >
+                            <MenuItem Header="{x:Static res:Resources.Del}" Click="menuItemRemoveEmployee_Click" >
                                 <MenuItem.Icon>
                                     <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
                                 </MenuItem.Icon>
@@ -43,10 +43,10 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" Width="*" FontSize="14"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding Path=FirstName}" Width="*" FontSize="14"/>
-                        <DataGridTextColumn Header="Отчество" Binding="{Binding Path=MiddleName}" Width="*" FontSize="14"/>
-                        <DataGridTextColumn Header="Специализация" Binding="{Binding Path=Specialization}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Binding="{Binding Path=LastName}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Binding="{Binding Path=FirstName}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.MiddleName}" Binding="{Binding Path=MiddleName}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Specailization}" Binding="{Binding Path=Specialization}" Width="*" FontSize="14"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">
@@ -90,7 +90,7 @@
 
         <GroupBox Grid.Column="1" Margin="0" Padding="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ДОБАВЛЕНИЕ СПЕЦИАЛИЗАЦИИ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.AddSpecailization}"/>
             </GroupBox.Header>
             <Grid>
                 <Grid.RowDefinitions>
@@ -103,7 +103,7 @@
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#33bcba"/>
                         <ContextMenu x:Key="DataRowContextMenu">
-                            <MenuItem Header="Удалить" Click="menuItemRemoveSpecialization_Click">
+                            <MenuItem Header="{x:Static res:Resources.Del}" Click="menuItemRemoveSpecialization_Click">
                                 <MenuItem.Icon>
                                     <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
                                 </MenuItem.Icon>
@@ -114,7 +114,7 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Специализации" Binding="{Binding Path=Name}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.SpecializationControl}" Binding="{Binding Path=Name}" Width="*" FontSize="14"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">

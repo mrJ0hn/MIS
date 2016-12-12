@@ -16,7 +16,7 @@
         </Grid.ColumnDefinitions>
         <GroupBox Grid.Column="0" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Patients}"/>
             </GroupBox.Header>
             <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10">
                 <DataGrid.Columns>
@@ -30,7 +30,7 @@
         </GroupBox>
         <GroupBox Grid.Column="1" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Search}"/>
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.RowDefinitions>
@@ -60,7 +60,7 @@
                 <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.Phone}" Style="{StaticResource LabelLine}"/>
                 <TextBox  Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBox}"/>
 
-                <Button Grid.Row="5" Grid.Column="1" Content="Найти" Height="20" Width="100" HorizontalAlignment="Right"/>
+                <Button Grid.Row="5" Grid.Column="1" Content="{x:Static res:Resources.Find}" Height="20" Width="100" HorizontalAlignment="Right"/>
             </Grid>
         </GroupBox>
     </Grid>

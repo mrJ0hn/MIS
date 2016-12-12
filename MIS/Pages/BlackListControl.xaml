@@ -16,23 +16,22 @@
 
         <GroupBox Grid.Column="0" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ДАННЫЕ ПОСЕТИТЕЛИ НАХОДЯТСЯ В ЧЕРНОМ СПИСКЕ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.VisitAreBlackList}"/>
             </GroupBox.Header>
             <DataGrid x:Name="gridblackList" FontSize="10">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="Фамилия" Width="*"/>
-                    <DataGridTextColumn Header="Имя" Width="*"/>
-                    <DataGridTextColumn Header="Отчество" Width="*"/>
-                    <DataGridTextColumn Header="Отчество" Width="*"/>
-                    <DataGridTextColumn Header="Дата рождения" Width="*"/>
-                    <DataGridTextColumn Header="Номер телефона" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.MiddleName}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Birthday}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Phone}" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>
 
         <GroupBox Grid.Column="1" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="ПОИСК"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Search}"/>
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.RowDefinitions>
@@ -67,7 +66,7 @@
                         <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
                         <TextBox Width="100" Style="{StaticResource TextBox}"/>
                     </StackPanel>-->
-                <Button Grid.Column="1" Grid.Row="5" Content="Найти" Height="20" Width="100" HorizontalAlignment="Right"/>
+                <Button Grid.Column="1" Grid.Row="5" Content="{x:Static res:Resources.Find}" Height="20" Width="100" HorizontalAlignment="Right"/>
             </Grid>
         </GroupBox>
     </Grid>

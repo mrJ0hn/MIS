@@ -24,7 +24,7 @@
             <Grid Grid.Column="0" Grid.RowSpan="2">
                 <GroupBox Margin="0" Padding="0" BorderThickness="0,0,1,1">
                     <GroupBox.Header>
-                        <Label Style="{StaticResource LableGroupBox}" Content="СОТРУДНИКИ"/>
+                        <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.Employee}"/>
                     </GroupBox.Header>
                     <ListView
                 x:Name="listEmployees" Grid.Row="1" VerticalAlignment="Stretch" 

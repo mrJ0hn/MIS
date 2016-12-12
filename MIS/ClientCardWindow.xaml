@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:MIS"
         xmlns:res="clr-namespace:MIS.Properties"
         mc:Ignorable="d"
-        Title="Основная карта посетителя" Height="800" Width="1400" Background="White"         
+        Title="{x:Static res:Resources.MailCardPatient}" Height="800" Width="1400" Background="White"         
         WindowStartupLocation="CenterScreen"
         WindowTitleBrush="#015c65" 
         WindowState="Maximized"
@@ -21,7 +21,7 @@
 
         <GroupBox Grid.Column="0" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="КАРТА ПОСЕТИТЕЛЯ"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.CardVisitor}"/>
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.ColumnDefinitions>
@@ -44,13 +44,13 @@
                 <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.ProvideService}"/>
                 <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Height="150" FontSize="10" BorderBrush="#33bcba" BorderThickness="1" Margin="0,0,0,10">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Наименование услуги" Width="1.5*"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.NameService}" Width="1.5*"/>
                         <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Cost}" Style="{StaticResource LabelLine}"/>
                 <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.Discount}" Style="{StaticResource LabelLine}"/>
-                <Label Grid.Column="0" Grid.Row="5" Content="Комментарий" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="5" Content="{x:Static res:Resources.Comments}" Style="{StaticResource LabelLine}"/>
                 <ComboBox Grid.Column="1" Grid.Row="0"
                               x:Name="comboBoxDoctor"
                               HorizontalContentAlignment="Left"
@@ -62,17 +62,17 @@
                 <TextBox Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="5" Height="70" Style="{StaticResource TextBox}"/>
                 <ListView  Grid.Row="6" Grid.ColumnSpan="2" BorderThickness="0" Margin="0,10,0,0">
-                    <CheckBox Name="chBoxCameReception" IsChecked="False" Content="Пришел на прием" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
-                    <CheckBox Name="chBoxCameAgain" IsChecked="False" Content="Пришел на прием повторно" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
-                    <CheckBox Name="chBoxCameWarranty" IsChecked="False" Content="Пришел по гарантии" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
-                    <CheckBox Name="chBoxBlackList" IsChecked="False" Content="В черный список" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Name="chBoxCameReception" IsChecked="False" Content="{x:Static res:Resources.CameReception}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Name="chBoxCameAgain" IsChecked="False" Content="{x:Static res:Resources.CameReceptionAgain}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Name="chBoxCameWarranty" IsChecked="False" Content="{x:Static res:Resources.CameReceptionWarranty}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Name="chBoxBlackList" IsChecked="False" Content="{x:Static res:Resources.BlackList}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
                 </ListView>
             </Grid>
         </GroupBox>
 
         <GroupBox Grid.Column="2" Padding="0" Margin="0">
             <GroupBox.Header>
-                <Label Style="{StaticResource LableGroupBox}" Content="КАРТА КЛИЕНТА"/>
+                <Label Style="{StaticResource LableGroupBox}" Content="{x:Static res:Resources.CardClient}"/>
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.ColumnDefinitions>
@@ -139,11 +139,11 @@
                 <TextBox Grid.Column="1" Grid.Row="9" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource TextBox}"/>
                 <ListView Grid.Row="11" Grid.ColumnSpan="2" Margin="10" BorderThickness="0">
-                    <CheckBox Name="chBoxAgreeData" IsChecked="True" Content="Согласие пациента" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
-                    <CheckBox Name="chBoxAgreeDentist" IsChecked="True" Content="Cогласие на выполнение медицинского вмешательства" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
-                    <CheckBox Name="chBoxAgreeOrtoped" IsChecked="True" Content="Cогласие на оказание услуг стоматолога-ортопеда" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
-                    <CheckBox Name="chBoxContractDentist" IsChecked="True" Content="Договор на оказание платных стоматологических услуг" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
-                    <CheckBox Name="chBoxContractService" IsChecked="True" Content="Договор на оказание платных медицинских услуг" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
+                    <CheckBox Name="chBoxAgreeData" IsChecked="True" Content="{x:Static res:Resources.ConsentPatient}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
+                    <CheckBox Name="chBoxAgreeDentist" IsChecked="True" Content="{x:Static res:Resources.ConsertPerfom}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
+                    <CheckBox Name="chBoxAgreeOrtoped" IsChecked="True" Content="{x:Static res:Resources.AgreementServices}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
+                    <CheckBox Name="chBoxContractDentist" IsChecked="True" Content="{x:Static res:Resources.ContractPaidDentist}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
+                    <CheckBox Name="chBoxContractService" IsChecked="True" Content="{x:Static res:Resources.ContractPaidMedical}" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
                 </ListView>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Grid.Column="1" Grid.Row="12" Margin="0,10,0,0">
                     <Button Content="{x:Static res:Resources.Print}" Height="20" Width="100" Margin="0,0,10,0"/>

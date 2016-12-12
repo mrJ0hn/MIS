@@ -79,6 +79,24 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ДОБАВЛЕНИЕ СПЕЦИАЛИЗАЦИИ.
+        /// </summary>
+        public static string AddSpecailization {
+            get {
+                return ResourceManager.GetString("AddSpecailization", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cогласие на оказание услуг стоматолога-ортопеда.
+        /// </summary>
+        public static string AgreementServices {
+            get {
+                return ResourceManager.GetString("AgreementServices", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Дата рождения.
         /// </summary>
         public static string Birthday {
@@ -178,11 +196,119 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Пришел на прием.
+        /// </summary>
+        public static string CameReception {
+            get {
+                return ResourceManager.GetString("CameReception", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пришел на прием повторно.
+        /// </summary>
+        public static string CameReceptionAgain {
+            get {
+                return ResourceManager.GetString("CameReceptionAgain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Пришел на прием по гарантии.
+        /// </summary>
+        public static string CameReceptionWarranty {
+            get {
+                return ResourceManager.GetString("CameReceptionWarranty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на КАРТА КЛИЕНТА.
+        /// </summary>
+        public static string CardClient {
+            get {
+                return ResourceManager.GetString("CardClient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на КАРТА ПОСЕТИТЕЛЯ.
+        /// </summary>
+        public static string CardVisitor {
+            get {
+                return ResourceManager.GetString("CardVisitor", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Комментарий.
+        /// </summary>
+        public static string Comments {
+            get {
+                return ResourceManager.GetString("Comments", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Согласие пациента.
+        /// </summary>
+        public static string ConsentPatient {
+            get {
+                return ResourceManager.GetString("ConsentPatient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Cогласие на выполнение медицинского вмешательства.
+        /// </summary>
+        public static string ConsertPerfom {
+            get {
+                return ResourceManager.GetString("ConsertPerfom", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Договор на оказание платных стоматологических услуг.
+        /// </summary>
+        public static string ContractPaidDentist {
+            get {
+                return ResourceManager.GetString("ContractPaidDentist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Договор на оказание платных медицинских услуг.
+        /// </summary>
+        public static string ContractPaidMedical {
+            get {
+                return ResourceManager.GetString("ContractPaidMedical", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Стоимость.
         /// </summary>
         public static string Cost {
             get {
                 return ResourceManager.GetString("Cost", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Удалить.
+        /// </summary>
+        public static string Del {
+            get {
+                return ResourceManager.GetString("Del", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Отделение.
+        /// </summary>
+        public static string Department {
+            get {
+                return ResourceManager.GetString("Department", resourceCulture);
             }
         }
         
@@ -214,6 +340,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на СОТРУДНИКИ.
+        /// </summary>
+        public static string Employee {
+            get {
+                return ResourceManager.GetString("Employee", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Ошибка.
         /// </summary>
         public static string Error {
@@ -237,6 +372,15 @@ namespace MIS.Properties {
         public static string FillInAllTheFields {
             get {
                 return ResourceManager.GetString("FillInAllTheFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Найти.
+        /// </summary>
+        public static string Find {
+            get {
+                return ResourceManager.GetString("Find", resourceCulture);
             }
         }
         
@@ -331,6 +475,15 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Основная карта посетителя.
+        /// </summary>
+        public static string MailCardPatient {
+            get {
+                return ResourceManager.GetString("MailCardPatient", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Мужской.
         /// </summary>
         public static string Male {
@@ -367,11 +520,38 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Наименование группы.
+        /// </summary>
+        public static string NameGroup {
+            get {
+                return ResourceManager.GetString("NameGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Наименование услуги.
+        /// </summary>
+        public static string NameService {
+            get {
+                return ResourceManager.GetString("NameService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Паспорт.
         /// </summary>
         public static string Passport {
             get {
                 return ResourceManager.GetString("Passport", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ПАЦИЕНТЫ.
+        /// </summary>
+        public static string Patients {
+            get {
+                return ResourceManager.GetString("Patients", resourceCulture);
             }
         }
         
@@ -394,11 +574,29 @@ namespace MIS.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на ПРЕЙСКУРАНТ.
+        /// </summary>
+        public static string PriceList {
+            get {
+                return ResourceManager.GetString("PriceList", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Печать.
         /// </summary>
         public static string Print {
             get {
                 return ResourceManager.GetString("Print", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ОКАЗАННЫЕ УСЛУГИ.
+        /// </summary>
+        public static string ProvidedServices {
+            get {
+                return ResourceManager.GetString("ProvidedServices", resourceCulture);
             }
         }
         
@@ -417,6 +615,15 @@ namespace MIS.Properties {
         public static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ПОИСК.
+        /// </summary>
+        public static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
             }
         }
         
@@ -471,6 +678,42 @@ namespace MIS.Properties {
         public static string Time {
             get {
                 return ResourceManager.GetString("Time", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ОТДЕЛЕНИЕ.
+        /// </summary>
+        public static string TitleDepartment {
+            get {
+                return ResourceManager.GetString("TitleDepartment", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ГРУППЫ.
+        /// </summary>
+        public static string TitleGroups {
+            get {
+                return ResourceManager.GetString("TitleGroups", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ПОСЕТИТЕЛЬ.
+        /// </summary>
+        public static string TitleVisit {
+            get {
+                return ResourceManager.GetString("TitleVisit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на ДАННЫЕ ПОСЕТИТЕЛИ НАХОДЯТСЯ В ЧЕРНОМ СПИСКЕ.
+        /// </summary>
+        public static string VisitAreBlackList {
+            get {
+                return ResourceManager.GetString("VisitAreBlackList", resourceCulture);
             }
         }
         
