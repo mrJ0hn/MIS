@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:res="clr-namespace:MIS.Properties"
-        Title="{x:Static res:Resources.BtnPrice}" Height="600" Width="900"
+        Title="{x:Static res:Resources.BtnPrice}" Height="600" Width="1000"
         WindowStartupLocation="CenterScreen"  
         BorderThickness="2,0,2,2"
         WindowTitleBrush="#015c65" 

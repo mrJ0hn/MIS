@@ -34,10 +34,10 @@
                           BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10"
                           AutoGenerateColumns="False" IsReadOnly="True">
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Отделение" Width="*"/>
-                        <DataGridTextColumn Header="Группа" Width="*"/>
+                        <DataGridTextColumn Header="Отделение" Width="auto"/>
+                        <DataGridTextColumn Header="Группа" Width="auto"/>
                         <DataGridTextColumn Header="Наименование услуги" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="auto"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">

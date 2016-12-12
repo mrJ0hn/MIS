@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:MIS"
         xmlns:res="clr-namespace:MIS.Properties"
         mc:Ignorable="d"
-        Title="СlientСard" Height="800" Width="1400" Background="White"         
+        Title="Основная карта посетителя" Height="800" Width="1400" Background="White"         
         WindowStartupLocation="CenterScreen"
         WindowTitleBrush="#015c65" 
         WindowState="Maximized"
@@ -40,14 +40,10 @@
                     <RowDefinition Height="40"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Doctor}"/>
-                <!--<Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.LabekSpecailization}"/>
-                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.Group}"/>-->
-                <Button Grid.Column="1" Grid.Row="1" Background="White" BorderBrush="White" HorizontalAlignment="Right" Content="Выбрать услуги" Click="BtnPriceWindow_Click"/>
+                <Button Grid.Column="1" Grid.Row="1" Background="White" BorderBrush="#33bcba" HorizontalAlignment="Right" Content="Выбрать услуги" Click="BtnPriceWindow_Click" Height="20" Width="100"/>
                 <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.ProvideService}"/>
                 <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="2" Height="150" FontSize="10" BorderBrush="#33bcba" BorderThickness="1" Margin="0,0,0,10">
                     <DataGrid.Columns>
-                        <!--<DataGridTextColumn Header="{x:Static res:Resources.Group}" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.Service}" Width="*"/>-->
                         <DataGridTextColumn Header="Наименование услуги" Width="1.5*"/>
                         <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
                     </DataGrid.Columns>
@@ -116,7 +112,7 @@
                               DisplayMemberPath="Name"
                               SelectedValuePath="Name"
                               FontSize="16"
-                              Width="70"
+                              Width="110"
                               Height="30"
                               Margin="5,0"/>
                     <TextBox Width="100" Style="{StaticResource TextBox}"/>

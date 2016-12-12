@@ -16,15 +16,15 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <!--<Grid.RowDefinitions>
             <RowDefinition Height="1.5*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>-->
 
-        <GroupBox Grid.Column="1" Margin="0" Padding="0">
+        <GroupBox Grid.Column="0" Margin="0" Padding="0">
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="ПОСЕТИТЕЛЬ"/>
             </GroupBox.Header>
@@ -60,7 +60,7 @@
                 <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
                 <DatePicker Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" FontFamily="BodoniNovaNr" FontSize="15" Foreground="#015c65"/>
-                <xctk:TimePicker Grid.Column="1" Grid.Row="5"  x:Name="inputTime" Height="30" Background="White"/>
+                <xctk:TimePicker Grid.Column="1" Grid.Row="5"  x:Name="inputTime" Height="30" Background="White" FontFamily="BodoniNovaNr" FontSize="15" BorderBrush="#015c65"/>
                 <ComboBox Grid.Column="1" Grid.Row="6"
                               x:Name="comboBoxEmployee"
                               HorizontalContentAlignment="Left"
@@ -73,7 +73,7 @@
             </Grid>
         </GroupBox>
         
-        <GroupBox Grid.Row="1" Margin="0" Padding="0">
+        <GroupBox Grid.Column="1" Margin="0" Padding="0">
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
             </GroupBox.Header>
