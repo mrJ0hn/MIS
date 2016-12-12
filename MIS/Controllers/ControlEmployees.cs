@@ -2,6 +2,7 @@
 using MIS.Model;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,18 +11,28 @@ namespace MIS.Controllers
 {
     class ControlEmployees
     {
-        private static DatabaseDataSet.EmployeeDataTable tableEmployees;
-        public DatabaseDataSet.EmployeeDataTable GetAllEmployees()
+        private static List<Employee> listEmployees;
+        public List<Employee> GetAllEmployees()
         {
-            if (tableEmployees == null) UpdateTable();
-            return tableEmployees;
+            if (listEmployees == null) UpdateTable();
+            return listEmployees;
         }
-
         private void UpdateTable()
         {
-            tableEmployees = new EmployeeTableAdapter().GetData();
+            var tableEmployees = new EmployeeTableAdapter().GetData();
+            listEmployees = ConvertTo(tableEmployees);
         }
-
+        public List<Employee> ConvertTo(DataTable datatable)
+        {
+            return datatable.AsEnumerable().Select(m => new Employee(
+                id: m.Field<int>("Id"),
+                firstName: m.Field<string>("FirstName").Trim(),
+                lastName: m.Field<string>("LastName").Trim(),
+                middleName: m.Field<string>("MiddleName").Trim(),
+                specialization: m.Field<string>("Specialization").Trim()
+                )
+            ).ToList();
+        }
         public void Add(Employee employee)
         {
             var adapter = new EmployeeTableAdapter();

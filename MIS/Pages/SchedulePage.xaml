@@ -33,16 +33,15 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="#33bcba">
-                                    <Grid Margin="3" >
-                                        <Grid.RowDefinitions>
-                                            <RowDefinition Height="*"/>
-                                        </Grid.RowDefinitions>
-                                        <Label VerticalAlignment="Bottom"
-                                    Style="{StaticResource ListLabel}" 
-                                    HorizontalContentAlignment="Left" 
-                                    Content="{Binding FullName}"
-                                               FontSize="12"/>
-                                    </Grid>
+                                    <StackPanel>
+                                        <Label VerticalAlignment="Bottom" Style="{StaticResource ListLabel}" 
+                                               HorizontalContentAlignment="Left" Content="{Binding FullName}"
+                                               FontSize="12"
+                                               Padding="5,5,5,0" />
+                                        <Label VerticalAlignment="Bottom" Style="{StaticResource ListLabel}"
+                                               HorizontalContentAlignment="Left" Content="{Binding Specialization}"
+                                               FontSize="10"/>
+                                    </StackPanel>
                                 </Border>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

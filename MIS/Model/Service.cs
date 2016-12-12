@@ -8,5 +8,6 @@ namespace MIS.Model
 {
     class Service
     {
+
     }
 }

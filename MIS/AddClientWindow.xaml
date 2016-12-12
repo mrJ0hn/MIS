@@ -61,10 +61,13 @@
                 <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
                 <DatePicker Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" FontFamily="BodoniNovaNr" FontSize="15" Foreground="#015c65"/>
                 <xctk:TimePicker Grid.Column="1" Grid.Row="5"  x:Name="inputTime" Height="30" Background="White"/>
-                <controls:DropDownButton  Grid.Column="1" Grid.Row="6"
-                                      HorizontalContentAlignment="Left"
-                                      DisplayMemberPath="FullName"
-                                      Height="30"/>
+                <ComboBox Grid.Column="1" Grid.Row="6"
+                              x:Name="comboBoxEmployee"
+                              HorizontalContentAlignment="Left"
+                              DisplayMemberPath="FullName"
+                              SelectedValuePath="FullName"
+                              FontSize="16"
+                              Height="30"/>
                 <TextBox Grid.Column="1" Grid.Row="7" VerticalContentAlignment="Top" VerticalAlignment="Center" Height="80" Style="{StaticResource TextBox}"/>
                 <Button Grid.Column="1" Grid.Row="8" Content="{x:Static res:Resources.ButtonAdd}" Height="20" Width="70" HorizontalAlignment="Right"/>
             </Grid>

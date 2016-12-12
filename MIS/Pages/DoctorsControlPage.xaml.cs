@@ -38,38 +38,7 @@ namespace MIS.Pages
             gridSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
             gridEmployee.ItemsSource = controlEmployees.GetAllEmployees();
         }
-        private List<Visitor> GetSpecialization()
-        {
-            List<Visitor> visitors = new List<Visitor>();
-            Visitor visitor = new Visitor()
-            {
-                FullName = "Александров Александр",
-            };
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            return visitors;
-        }
-
+      
         private void btnAddSpecialization_Click(object sender, RoutedEventArgs e)
         {
             if (txtSpecialization.Text == null || txtSpecialization.Text.Trim().Length == 0)

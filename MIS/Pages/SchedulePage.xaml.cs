@@ -1,4 +1,5 @@
-﻿using MIS.Model;
+﻿using MIS.Controllers;
+using MIS.Model;
 using QuickWPFMonthCalendar;
 using System;
 using System.Collections.Generic;
@@ -22,11 +23,13 @@ namespace MIS.Pages
     /// </summary>
     public partial class SchedulePage : Page
     {
+        private ControlEmployees controlEmployee;
         private List<Appointment> data = new List<Appointment>();
         public SchedulePage()
         {
             InitializeComponent();
-            listEmployees.ItemsSource = GetVisitors();
+            controlEmployee = new ControlEmployees();
+            listEmployees.ItemsSource = controlEmployee.GetAllEmployees();
             LoadAppointment();
             UpdateData();
             //calendarTuesday.Appointments = appointments2;
@@ -54,32 +57,7 @@ namespace MIS.Pages
         private List<Visitor> GetVisitors()
         {
             List<Visitor> visitors = new List<Visitor>();
-            Visitor visitor = new Visitor()
-            {
-                FullName = "Александров Александр",
-            };
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
-            visitors.Add(visitor);
+            
             return visitors;
         }
         private void btnNewVisitor_Click(object sender, RoutedEventArgs e)
