@@ -32,7 +32,7 @@
                         <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
                    Color="#33bcba"/>
                         <ContextMenu x:Key="DataRowContextMenu">
-                            <MenuItem Header="Удалить" Click="menuItemRemoveEmployee_Click">
+                            <MenuItem Header="Удалить" Click="menuItemRemoveEmployee_Click" >
                                 <MenuItem.Icon>
                                     <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
                                 </MenuItem.Icon>
@@ -64,13 +64,13 @@
 
                     <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Surname}" Style="{StaticResource LabelLine}"
                    HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="txtLastName" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" />
+                    <TextBox x:Name="txtLastName" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" KeyUp="TextBoxEmployee_KeyEnterUpdate"/>
                     <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.FirstName}" Style="{StaticResource LabelLine}"
                   HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="txtFirstName" Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
+                    <TextBox x:Name="txtFirstName" Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}" KeyUp="TextBoxEmployee_KeyEnterUpdate"/>
                     <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"
                     HorizontalAlignment="Stretch"/>
-                    <TextBox x:Name="txtMiddleName" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
+                    <TextBox x:Name="txtMiddleName" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}" KeyUp="TextBoxEmployee_KeyEnterUpdate"/>
 
                     <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"
                   HorizontalAlignment="Stretch"/>
@@ -80,7 +80,8 @@
                               DisplayMemberPath="Name"
                               SelectedValuePath="Name"
                               FontSize="16"
-                              Height="30"/>
+                              Height="30"
+                              KeyUp="TextBoxEmployee_KeyEnterUpdate"/>
                     <Button x:Name="btnAddEmployee"  Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}"
                         Width="100" Height="20" HorizontalAlignment="Right" Click="btnAddEmployee_Click"/>
                 </Grid>
@@ -130,9 +131,9 @@
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Specailization}" Style="{StaticResource LabelLine}"
                    Margin="0,0,10,0"/>
-                    <TextBox x:Name="txtSpecialization" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
+                    <TextBox x:Name="txtSpecialization" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" KeyUp="TextBoxSpecialization_KeyEnterUpdate"/>
                     <Button x:Name="btnAddSpecialization" Grid.Column="1" Grid.Row="1" Content="{x:Static res:Resources.ButtonAdd}"
-                    Height="20" Width="100" HorizontalAlignment="Right" Click="btnAddSpecialization_Click" />
+                    Height="20" Width="100" HorizontalAlignment="Right" Click="btnAddSpecialization_Click"/>
                 </Grid>
             </Grid>
         </GroupBox>

@@ -13,6 +13,7 @@ namespace MIS.Model
         public string FirstName { get; private set; }
         public string MiddleName { get; private set; }
         public int IdSpecialization { get; private set; }
+        public string Specialization { get; private set; }
         public string FullName
         {
             get
@@ -21,6 +22,7 @@ namespace MIS.Model
             }
         }
 
+        public Employee() { }
         public Employee(string lastName, string firstName, string middleName, int idSpecialization)
         {
             LastName = lastName;
@@ -35,6 +37,14 @@ namespace MIS.Model
             FirstName = firstName;
             MiddleName = middleName;
             IdSpecialization = idSpecialization;
+        }
+        public Employee(int id, string lastName, string firstName, string middleName, string specialization)
+        {
+            Id = id;
+            LastName = lastName;
+            FirstName = firstName;
+            MiddleName = middleName;
+            Specialization = specialization;
         }
     }
 }

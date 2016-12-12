@@ -1,4 +1,5 @@
 ﻿using MahApps.Metro.Controls;
+using MIS.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,9 +21,12 @@ namespace MIS
     /// </summary>
     public partial class AddClientWindow : MetroWindow
     {
+        private ControlEmployees controlEmployees;
         public AddClientWindow()
         {
             InitializeComponent();
+            controlEmployees = new ControlEmployees();
+            comboBoxEmployee.ItemsSource = controlEmployees.GetAllEmployees();
         }
     }
 }

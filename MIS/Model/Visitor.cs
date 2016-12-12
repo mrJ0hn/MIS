@@ -8,8 +8,12 @@ namespace MIS.Model
 {
     class Visitor
     {
-        public string FullName { get; set; }
+        public Client Client { get; private set; }
+        public Employee Doctor { get; private set; }
+        public List<Service> ListServices { get; private set; }
+        public DateTime VisitDate { get; private set; }
+        public decimal Discount { get; private set; }
+        public string Remark { get; private set; }
 
-        public DateTime VisitDate { get; set; }
     }
 }
