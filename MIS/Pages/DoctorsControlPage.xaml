@@ -43,10 +43,10 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" Width="*" FontSize="16"/>
-                        <DataGridTextColumn Header="Имя" Binding="{Binding Path=FirstName}" Width="*" FontSize="16"/>
-                        <DataGridTextColumn Header="Отчество" Binding="{Binding Path=MiddleName}" Width="*" FontSize="16"/>
-                        <DataGridTextColumn Header="Специализация" Binding="{Binding Path=Specialization}" Width="*" FontSize="16"/>
+                        <DataGridTextColumn Header="Фамилия" Binding="{Binding Path=LastName}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="Имя" Binding="{Binding Path=FirstName}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="Отчество" Binding="{Binding Path=MiddleName}" Width="*" FontSize="14"/>
+                        <DataGridTextColumn Header="Специализация" Binding="{Binding Path=Specialization}" Width="*" FontSize="14"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">
@@ -100,6 +100,8 @@
                 <DataGrid x:Name="gridSpecialization" Grid.Row="0" AutoGenerateColumns="False" IsReadOnly="True"
                           BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
                     <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#33bcba"/>
                         <ContextMenu x:Key="DataRowContextMenu">
                             <MenuItem Header="Удалить" Click="menuItemRemoveSpecialization_Click">
                                 <MenuItem.Icon>
@@ -112,7 +114,7 @@
                         </Style>
                     </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Специализации" Binding="{Binding Path=Name}" Width="*" FontSize="16"/>
+                        <DataGridTextColumn Header="Специализации" Binding="{Binding Path=Name}" Width="*" FontSize="14"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">

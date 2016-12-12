@@ -20,11 +20,11 @@
             </GroupBox.Header>
             <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
                 <DataGrid.Columns>
-                    <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*"/>
-                    <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Width="*"/>
-                    <DataGridTextColumn Header="{x:Static res:Resources.MiddleName}" Width="*"/>
-                    <DataGridTextColumn Header="{x:Static res:Resources.Birthday}" Width="*"/>
-                    <DataGridTextColumn Header="{x:Static res:Resources.Phone}" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*" FontSize="14"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Width="*" FontSize="14"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.MiddleName}" Width="*" FontSize="14"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Birthday}" Width="*" FontSize="14"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Phone}" Width="*" FontSize="14"/>
                 </DataGrid.Columns>
             </DataGrid>
         </GroupBox>

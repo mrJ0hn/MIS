@@ -32,9 +32,9 @@
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="auto"/>
-                    <RowDefinition Height="auto"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
+                    <RowDefinition Height="70"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="0" Content="{x:Static res:Resources.Doctor}"/>
@@ -52,11 +52,32 @@
                 </DataGrid>
                 <Label Grid.Column="0" Grid.Row="6" Content="{x:Static res:Resources.Cost}" Style="{StaticResource LabelLine}"/>
                 <Label Grid.Column="0" Grid.Row="7" Content="{x:Static res:Resources.Discount}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="8" Content="Причина нахождения в черном списке" Style="{StaticResource LabelLine}"/>
                 <TextBox Grid.Column="1" Grid.Row="6" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="7" Style="{StaticResource TextBox}"/>
+                <TextBox Grid.Column="1" Grid.Row="8" Height="70" Style="{StaticResource TextBox}"/>
                 <ComboBox Grid.Column="1" Grid.Row="0"  Style="{StaticResource ComboBox}"/>
                 <ComboBox Grid.Column="1" Grid.Row="1" Style="{StaticResource ComboBox}"/>
                 <ComboBox Grid.Column="1" Grid.Row="2" Style="{StaticResource ComboBox}"/>
+                <Grid Grid.Row="9" Grid.ColumnSpan="2" Margin="10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="auto"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox Grid.Row="0" Grid.Column="0" Name="chBoxCameReception" IsChecked="False" Content="Пришел на прием" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Grid.Row="0" Grid.Column="1" Name="chBoxNotCameReception" IsChecked="False" Content="Не пришел на прием" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Grid.Row="1" Grid.Column="0" Name="chBoxCameAgain" IsChecked="False" Content="Пришел на прием повторно" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Grid.Row="1" Grid.Column="1" Name="chBoxNotCameAgain" IsChecked="False" Content="Не пришел на прием повторно" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Grid.Row="2" Grid.Column="0" Name="chBoxCameWarranty" IsChecked="False" Content="Пришел по гарантии" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                    <CheckBox Grid.Row="3" Grid.Column="0" Name="chBoxBlackList" IsChecked="False" Content="В черный список" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,10,0"/>
+                </Grid>
             </Grid>
         </GroupBox>
 
@@ -121,7 +142,7 @@
                 <TextBox Grid.Column="1" Grid.Row="8" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="9" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="10" Style="{StaticResource TextBox}"/>
-                <ListView Grid.Row="11" Grid.ColumnSpan="2" Margin="10">
+                <ListView Grid.Row="11" Grid.ColumnSpan="2" Margin="10" BorderThickness="0">
                     <CheckBox Name="chBoxAgreeData" IsChecked="True" Content="Согласие пациента" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
                     <CheckBox Name="chBoxAgreeDentist" IsChecked="True" Content="Cогласие на выполнение медицинского вмешательства" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
                     <CheckBox Name="chBoxAgreeOrtoped" IsChecked="True" Content="Cогласие на оказание услуг стоматолога-ортопеда" FontSize="15" FontFamily="BodoniNovaNr" Margin="0,5,0,0"/>
