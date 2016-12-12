@@ -23,6 +23,8 @@
                     <DataGridTextColumn Header="Фамилия" Width="*"/>
                     <DataGridTextColumn Header="Имя" Width="*"/>
                     <DataGridTextColumn Header="Отчество" Width="*"/>
+                    <DataGridTextColumn Header="Отчество" Width="*"/>
+                    <DataGridTextColumn Header="Дата рождения" Width="*"/>
                     <DataGridTextColumn Header="Номер телефона" Width="*"/>
                 </DataGrid.Columns>
             </DataGrid>
@@ -34,6 +36,7 @@
             </GroupBox.Header>
             <Grid Margin="10">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="40"/>
@@ -54,14 +57,17 @@
                 <Label  Grid.Column="0" Grid.Row="2" Content="{x:Static res:Resources.MiddleName}" Style="{StaticResource LabelLine}"/>
                 <TextBox  Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
 
-                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Phone}" Style="{StaticResource LabelLine}"/>
+                <Label Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Birthday}" Style="{StaticResource LabelLine}"/>
                 <TextBox  Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
+
+                <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.Phone}" Style="{StaticResource LabelLine}"/>
+                <TextBox  Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBox}"/>
                 <!--<StackPanel Grid.Column="1" Grid.Row="3" Orientation="Horizontal">
                         <TextBox Width="70" Style="{StaticResource TextBox}"/>
                         <ComboBox Width="170" Style="{StaticResource ComboBox}"/>
                         <TextBox Width="100" Style="{StaticResource TextBox}"/>
                     </StackPanel>-->
-                <Button Grid.Column="1" Grid.Row="4" Content="Найти" Height="20" Width="100" HorizontalAlignment="Right"/>
+                <Button Grid.Column="1" Grid.Row="5" Content="Найти" Height="20" Width="100" HorizontalAlignment="Right"/>
             </Grid>
         </GroupBox>
     </Grid>

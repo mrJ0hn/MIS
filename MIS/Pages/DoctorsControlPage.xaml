@@ -34,7 +34,7 @@
                         <ContextMenu x:Key="DataRowContextMenu">
                             <MenuItem Header="Удалить" Click="menuItemRemoveEmployee_Click" >
                                 <MenuItem.Icon>
-                                    <Image Height="15" Width="15" Source="..//../Pictures/Icon.png"/>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
                                 </MenuItem.Icon>
                             </MenuItem>
                         </ContextMenu>
@@ -105,7 +105,7 @@
                         <ContextMenu x:Key="DataRowContextMenu">
                             <MenuItem Header="Удалить" Click="menuItemRemoveSpecialization_Click">
                                 <MenuItem.Icon>
-                                    <Image Height="15" Width="15" Source="..//../Pictures/Icon.png"/>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
                                 </MenuItem.Icon>
                             </MenuItem>
                         </ContextMenu>

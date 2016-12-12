@@ -18,7 +18,7 @@
             <GroupBox.Header>
                 <Label Style="{StaticResource LableGroupBox}" Content="ПАЦИЕНТЫ"/>
             </GroupBox.Header>
-            <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10">
+            <DataGrid Name="ServicesRendered" Grid.Column="0" Grid.ColumnSpan="2" BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10">
                 <DataGrid.Columns>
                     <DataGridTextColumn Header="{x:Static res:Resources.Surname}" Width="*" FontSize="14"/>
                     <DataGridTextColumn Header="{x:Static res:Resources.FirstName}" Width="*" FontSize="14"/>

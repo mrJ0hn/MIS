@@ -29,7 +29,8 @@
                     <ListView
                 x:Name="listEmployees" Grid.Row="1" VerticalAlignment="Stretch" 
                HorizontalContentAlignment="Stretch"
-                ScrollViewer.VerticalScrollBarVisibility="Hidden">
+                ScrollViewer.VerticalScrollBarVisibility="Hidden"
+                        BorderThickness="0">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <Border Margin="1" BorderThickness="0,0,0,0.5" BorderBrush="#33bcba">

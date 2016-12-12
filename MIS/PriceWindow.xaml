@@ -1,0 +1,80 @@
+﻿<controls:MetroWindow x:Class="MIS.PriceWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MIS"
+        mc:Ignorable="d"
+        xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:res="clr-namespace:MIS.Properties"
+        Title="{x:Static res:Resources.BtnPrice}" Height="600" Width="900"
+        WindowStartupLocation="CenterScreen"  
+        BorderThickness="2,0,2,2"
+        WindowTitleBrush="#015c65" 
+        BorderBrush="#015c65">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1.5*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <GroupBox Grid.Column="0" Padding="0" Margin="0">
+            <GroupBox.Header>
+                <Label Style="{StaticResource LableGroupBox}" Content="ОКАЗАННЫЕ УСЛУГИ"/>
+            </GroupBox.Header>
+            <DataGrid x:Name="gridPrice" FontSize="10" 
+                      BorderBrush="#33bcba" BorderThickness="0"
+                      AutoGenerateColumns="False" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Отделение" Width="*"/>
+                    <DataGridTextColumn Header="Группа" Width="*"/>
+                    <DataGridTextColumn Header="Наименование услуги" Width="*"/>
+                    <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </GroupBox>
+
+        <GroupBox Grid.Column="1" Padding="0" Margin="0">
+            <GroupBox.Header>
+                <Label Style="{StaticResource LableGroupBox}" Content="ПОИСК"/>
+            </GroupBox.Header>
+            <Grid Margin="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="0" Content="Отделние"/>
+                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Group}"/>
+                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="2" Content="Наименование услуги"/>
+                <Label Style="{StaticResource LabelLine}" Grid.Column="0" Grid.Row="3" Content="{x:Static res:Resources.Cost}"/>
+                <Label Grid.Column="0" Grid.Row="4" Content="{x:Static res:Resources.ButtonSearch}" Style="{StaticResource LabelLine}"/>
+                <ComboBox Grid.Column="1" Grid.Row="0"
+                              x:Name="comboBoxOffice"
+                              HorizontalContentAlignment="Left"
+                              FontSize="14"
+                              Height="30"/>
+                <ComboBox Grid.Column="1" Grid.Row="1"
+                              x:Name="comboBoxGroup"
+                              HorizontalContentAlignment="Left"
+                              FontSize="14"
+                              Height="30"/>
+                <ComboBox Grid.Column="1" Grid.Row="2"
+                              x:Name="comboBoxServices"
+                              HorizontalContentAlignment="Left"
+                              FontSize="14"
+                              Height="30"/>
+                <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
+                <TextBox Grid.Column="1" Grid.Row="4" Style="{StaticResource TextBox}"/>
+                <Button Grid.Column="1" Grid.Row="5" Content="{x:Static res:Resources.ButtonSearch}" Height="20" Width="100" HorizontalAlignment="Right"/>
+            </Grid>
+        </GroupBox>
+    </Grid>
+</controls:MetroWindow>

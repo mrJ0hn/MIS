@@ -47,5 +47,10 @@ namespace MIS
         {
             SetPageInMainFrame(new Pages.PatientPageControl());
         }
+
+        private void btnSettings_Click(object sender, RoutedEventArgs e)
+        {
+            new СlientСardWindow().Show();
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MahApps.Metro.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,11 +18,16 @@ namespace MIS
     /// <summary>
     /// Логика взаимодействия для СlientСard.xaml
     /// </summary>
-    public partial class СlientСardWindow : Window
+    public partial class СlientСardWindow : MetroWindow
     {
         public СlientСardWindow()
         {
             InitializeComponent();
+        }
+
+        private void BtnPriceWindow_Click(object sender, RoutedEventArgs e)
+        {
+            new PriceWindow().Show();
         }
     }
 }
