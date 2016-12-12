@@ -16,6 +16,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using MahApps.Metro.Controls.Dialogs;
+using MahApps.Metro.Controls;
 
 namespace MIS.Pages
 {
@@ -70,6 +72,11 @@ namespace MIS.Pages
 
         private void btnAddSpecialization_Click(object sender, RoutedEventArgs e)
         {
+            if (txtSpecialization.Text == null || txtSpecialization.Text.Trim().Length == 0)
+            {
+                var result = DialogService.ShowMessage(Properties.Resources.FillInAllTheFields, MessageDialogStyle.Affirmative);
+                return;
+            }
             controlSpecializations.Add(new Specialization(txtSpecialization.Text.Trim()));
             txtSpecialization.Clear();
             gridSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
@@ -83,6 +90,7 @@ namespace MIS.Pages
             if (txtLastName.Text == null || txtFirstName.Text == null || txtMiddleName.Text == null
                 || a == null)
             {
+                var result = DialogService.ShowMessage(Properties.Resources.FillInAllTheFields, MessageDialogStyle.Affirmative);
                 return;
             }
             controlEmployees.Add(new Employee(
@@ -126,6 +134,15 @@ namespace MIS.Pages
                 controlEmployees.Remove(employee);
                 gridEmployee.ItemsSource = controlEmployees.GetAllEmployees();
             }
+        }
+
+        private void TextBoxSpecialization_KeyEnterUpdate(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) btnAddSpecialization_Click(null, null);
+        }
+        private void TextBoxEmployee_KeyEnterUpdate(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Enter) btnAddEmployee_Click(null, null);
         }
     }
 }
