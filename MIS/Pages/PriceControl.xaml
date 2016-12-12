@@ -33,11 +33,26 @@
                           VerticalAlignment="Stretch" BorderBrush="#33bcba" 
                           BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10"
                           AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#33bcba"/>
+                        <ContextMenu x:Key="DataRowContextMenu">
+                            <MenuItem Header="Удалить" Click="menuItemRemoveService_Click" >
+                                <MenuItem.Icon>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
+                            <Setter Property="FontSize" Value="14"/>
+                        </Style>
+                    </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Отделение" Width="*"/>
-                        <DataGridTextColumn Header="Группа" Width="*"/>
-                        <DataGridTextColumn Header="Наименование услуги" Width="*"/>
-                        <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="*"/>
+                        <DataGridTextColumn Header="Отделение" Width="auto" Binding="{Binding Path=Department}"/>
+                        <DataGridTextColumn Header="Группа" Width="auto" Binding="{Binding Path=Group}"/>
+                        <DataGridTextColumn Header="Наименование услуги" Width="*" Binding="{Binding Path=Name}"/>
+                        <DataGridTextColumn Header="{x:Static res:Resources.Cost}" Width="auto" Binding="{Binding Path=Cost, StringFormat=F2}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">
@@ -54,20 +69,31 @@
                     </Grid.ColumnDefinitions>
 
                     <Label Grid.Column="0" Grid.Row="0" Content="Отделение" Style="{StaticResource LabelLine}"/>
-                    <controls:DropDownButton  Grid.Column="1" Grid.Row="0"
-                                      HorizontalContentAlignment="Left"
-                                      DisplayMemberPath="FullName"
-                                      Height="30"/>
+                    <ComboBox Grid.Column="1" Grid.Row="0"
+                              x:Name="comboBoxDepartment"
+                              HorizontalContentAlignment="Left"
+                              DisplayMemberPath="Name"
+                              SelectedValuePath="Name"
+                              FontSize="16"
+                              Height="30"
+                              KeyUp="TextBoxService_KeyEnterUpdate"/>
                     <Label Grid.Column="0" Grid.Row="1" Content="{x:Static res:Resources.Group}" Style="{StaticResource LabelLine}"/>
-                    <controls:DropDownButton  Grid.Column="1" Grid.Row="1"
-                                      HorizontalContentAlignment="Left"
-                                      DisplayMemberPath="FullName"
-                                      Height="30" />
+                    <ComboBox Grid.Column="1" Grid.Row="1"
+                              x:Name="comboBoxGroup"
+                              HorizontalContentAlignment="Left"
+                              DisplayMemberPath="Name"
+                              SelectedValuePath="Name"
+                              FontSize="16"
+                              Height="30"
+                              KeyUp="TextBoxService_KeyEnterUpdate"/>
                     <Label Grid.Column="0" Grid.Row="2" Content="Наименование услуги" Style="{StaticResource LabelLine}"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}" />
+                    <TextBox x:Name="txtServiceName" Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}" KeyUp="TextBoxService_KeyEnterUpdate"/>
                     <Label Grid.Column="0" Grid.Row="3" Content="Стоимость" Style="{StaticResource LabelLine}"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
-                    <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="txtCost" Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}" 
+                             PreviewTextInput="NumberValidationTextBox"
+                             KeyUp="TextBoxService_KeyEnterUpdate"/>
+                    <Button Grid.Column="1" Grid.Row="4" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"
+                            Click="btnAddService_Click"/>
                 </Grid>
             </Grid>
         </GroupBox>
@@ -82,11 +108,26 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
-                <DataGrid x:Name="gridOffice" Grid.Row="0" VerticalAlignment="Stretch" 
+                <DataGrid x:Name="gridDepartment" Grid.Row="0" VerticalAlignment="Stretch" 
                           BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" 
                           Margin="0,0,0,10" AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#33bcba"/>
+                        <ContextMenu x:Key="DataRowContextMenu">
+                            <MenuItem Header="Удалить" Click="menuItemRemoveDepartment_Click" >
+                                <MenuItem.Icon>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}"/>
+                            <Setter Property="FontSize" Value="14"/>
+                        </Style>
+                    </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Наменования отделений" Width="*"/>
+                        <DataGridTextColumn Header="Отделение" Width="*" Binding="{Binding Path=Name}"/>
                     </DataGrid.Columns>
                 </DataGrid>
 
@@ -101,8 +142,10 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Grid.Row="0" Content="Наименование отделения" Style="{StaticResource LabelLine}"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" />
-                    <Button Grid.Column="1" Grid.Row="1" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="txtDepartment" Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}" KeyUp="TextBoxDepartment_KeyEnterUpdate"/>
+                    <Button x:Name="btnAddDepartment" Grid.Column="1" Grid.Row="1" 
+                            Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" 
+                            HorizontalAlignment="Right" Click="btnAddDepartment_Click"/>
                 </Grid>
             </Grid>
         </GroupBox>
@@ -119,9 +162,24 @@
                 <DataGrid x:Name="gridGroup" Grid.Row="0" VerticalAlignment="Stretch" 
                           BorderBrush="#33bcba" BorderThickness="0,0,0,1" FontSize="10" Margin="0,0,0,10"
                           AutoGenerateColumns="False" IsReadOnly="True">
+                    <DataGrid.Resources>
+                        <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" 
+                   Color="#33bcba"/>
+                        <ContextMenu x:Key="DataRowContextMenu">
+                            <MenuItem Header="Удалить" Click="menuItemRemoveGroup_Click" >
+                                <MenuItem.Icon>
+                                    <Image Height="15" Width="15" Source="..//../Pictures/Delete.png"/>
+                                </MenuItem.Icon>
+                            </MenuItem>
+                        </ContextMenu>
+                        <Style TargetType="{x:Type DataGridCell}">
+                            <Setter Property="ContextMenu" Value="{StaticResource DataRowContextMenu}" />
+                            <Setter Property="FontSize" Value="14"/>
+                        </Style>
+                    </DataGrid.Resources>
                     <DataGrid.Columns>
-                        <DataGridTextColumn Header="Отделение" Width="*"/>
-                        <DataGridTextColumn Header="Группа" Width="*"/>
+                        <DataGridTextColumn Header="Отделение" Width="auto" Binding="{Binding Path=Department}"/>
+                        <DataGridTextColumn Header="Группа" Width="*" Binding="{Binding Path=Name}"/>
                     </DataGrid.Columns>
                 </DataGrid>
                 <Grid Grid.Row="1" Margin="10">
@@ -136,13 +194,18 @@
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
                     <Label Grid.Column="0" Grid.Row="0" Content="Отделение" Style="{StaticResource LabelLine}"/>
-                    <controls:DropDownButton  Grid.Column="1" Grid.Row="0"                                     
-                                      HorizontalContentAlignment="Left"
-                                      DisplayMemberPath="FullName"
-                                      Height="30"/>
+                    <ComboBox x:Name="comboBoxDepartmentInGroup"
+                              Grid.Column="1" Grid.Row="0"                                     
+                              HorizontalContentAlignment="Left"
+                              DisplayMemberPath="Name"
+                              SelectedValuePath="Name"
+                              FontSize="16"
+                              Height="30"
+                              KeyUp="TextBoxGroup_KeyEnterUpdate"/>
                     <Label Grid.Column="0" Grid.Row="1" Content="Наименование группы" Style="{StaticResource LabelLine}"/>
-                    <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
-                    <Button Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" Width="100" Height="20" HorizontalAlignment="Right"/>
+                    <TextBox x:Name="txtNameGroup" Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}" KeyUp="TextBoxGroup_KeyEnterUpdate"/>
+                    <Button x:Name="btnAddGroup" Grid.Column="1" Grid.Row="2" Content="{x:Static res:Resources.ButtonAdd}" 
+                            Width="100" Height="20" HorizontalAlignment="Right" Click="btnAddGroup_Click"/>
                 </Grid>
             </Grid>
         </GroupBox>

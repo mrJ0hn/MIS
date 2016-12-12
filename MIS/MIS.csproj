@@ -85,8 +85,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\ControlDepartment.cs" />
     <Compile Include="Controllers\ControlEmployees.cs" />
+    <Compile Include="Controllers\ControlGroup.cs" />
+    <Compile Include="Controllers\ControlService.cs" />
     <Compile Include="Controllers\ControlSpecializations.cs" />
+    <Compile Include="Controllers\IControl.cs" />
     <Compile Include="DatabaseDataSet.cs">
       <DependentUpon>DatabaseDataSet.xsd</DependentUpon>
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

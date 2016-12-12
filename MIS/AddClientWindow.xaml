@@ -58,7 +58,7 @@
                 <TextBox Grid.Column="1" Grid.Row="0" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="1" Style="{StaticResource TextBox}"/>
                 <TextBox Grid.Column="1" Grid.Row="2" Style="{StaticResource TextBox}"/>
-                <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}"/>
+                <TextBox Grid.Column="1" Grid.Row="3" Style="{StaticResource TextBox}" PreviewTextInput="NumberValidationTextBox"/>
                 <DatePicker Grid.Column="1" Grid.Row="4" VerticalAlignment="Center" FontFamily="BodoniNovaNr" FontSize="15" Foreground="#015c65"/>
                 <xctk:TimePicker Grid.Column="1" Grid.Row="5"  x:Name="inputTime" Height="30" Background="White"/>
                 <ComboBox Grid.Column="1" Grid.Row="6"

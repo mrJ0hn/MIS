@@ -34,9 +34,9 @@ namespace MIS.Pages
             InitializeComponent();
             controlSpecializations = new ControlSpecializations();
             controlEmployees = new ControlEmployees();
-            comboBoxSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
-            gridSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
-            gridEmployee.ItemsSource = controlEmployees.GetAllEmployees();
+            comboBoxSpecialization.ItemsSource = controlSpecializations.GetAll();
+            gridSpecialization.ItemsSource = controlSpecializations.GetAll();
+            gridEmployee.ItemsSource = controlEmployees.GetAll();
         }
       
         private void btnAddSpecialization_Click(object sender, RoutedEventArgs e)
@@ -48,16 +48,16 @@ namespace MIS.Pages
             }
             controlSpecializations.Add(new Specialization(txtSpecialization.Text.Trim()));
             txtSpecialization.Clear();
-            gridSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
-            comboBoxSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
+            gridSpecialization.ItemsSource = controlSpecializations.GetAll();
+            comboBoxSpecialization.ItemsSource = controlSpecializations.GetAll();
         }
 
         private void btnAddEmployee_Click(object sender, RoutedEventArgs e)
         {
-            var a = (DataRowView)comboBoxSpecialization.SelectedItem;
+            var specialization = (Specialization)comboBoxSpecialization.SelectedItem;
 
             if (txtLastName.Text == null || txtFirstName.Text == null || txtMiddleName.Text == null
-                || a == null)
+                || specialization == null)
             {
                 var result = DialogService.ShowMessage(Properties.Resources.FillInAllTheFields, MessageDialogStyle.Affirmative);
                 return;
@@ -66,42 +66,31 @@ namespace MIS.Pages
                 txtLastName.Text.Trim(),
                 txtFirstName.Text.Trim(),
                 txtMiddleName.Text.Trim(),
-                (int)a.Row["Id"]));
+                specialization.Id));
             txtLastName.Clear();
             txtFirstName.Clear();
             txtMiddleName.Clear();
             comboBoxSpecialization.SelectedItem = null;
-            gridEmployee.ItemsSource = controlEmployees.GetAllEmployees();
+            gridEmployee.ItemsSource = controlEmployees.GetAll();
         }
 
         private void menuItemRemoveSpecialization_Click(object sender, RoutedEventArgs e)
         {
-            var a = (DataRowView)gridSpecialization.SelectedItem;
-            if (a != null)
+            var specialization = (Specialization)gridSpecialization.SelectedItem;
+            if (specialization != null)
             {
-                var specialization = new Specialization(
-                    (int)a.Row["Id"],
-                    a.Row["Name"] as string
-                    );
                 controlSpecializations.Remove(specialization);
-                gridSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
-                comboBoxSpecialization.ItemsSource = controlSpecializations.GetAllSpecializations();
+                gridSpecialization.ItemsSource = controlSpecializations.GetAll();
+                comboBoxSpecialization.ItemsSource = controlSpecializations.GetAll();
             }
         }
         private void menuItemRemoveEmployee_Click(object sender, RoutedEventArgs e)
         {
-            var a = (DataRowView)gridEmployee.SelectedItem;
-            if (a != null)
+            var employee = (Employee)gridEmployee.SelectedItem;
+            if (employee != null)
             {
-                var employee = new Employee(
-                    (int)a.Row["Id"],
-                    a.Row["LastName"] as string,
-                    a.Row["FirstName"] as string,
-                    a.Row["MiddleName"] as string,
-                    -1
-                    );
                 controlEmployees.Remove(employee);
-                gridEmployee.ItemsSource = controlEmployees.GetAllEmployees();
+                gridEmployee.ItemsSource = controlEmployees.GetAll();
             }
         }
 
