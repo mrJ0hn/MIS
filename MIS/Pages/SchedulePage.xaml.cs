@@ -29,7 +29,7 @@ namespace MIS.Pages
         {
             InitializeComponent();
             controlEmployee = new ControlEmployees();
-            listEmployees.ItemsSource = controlEmployee.GetAllEmployees();
+            listEmployees.ItemsSource = controlEmployee.GetAll();
             LoadAppointment();
             UpdateData();
             //calendarTuesday.Appointments = appointments2;

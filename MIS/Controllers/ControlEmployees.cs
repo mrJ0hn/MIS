@@ -9,10 +9,10 @@ using System.Threading.Tasks;
 
 namespace MIS.Controllers
 {
-    class ControlEmployees
+    class ControlEmployees: IControl<Employee>
     {
         private static List<Employee> listEmployees;
-        public List<Employee> GetAllEmployees()
+        public List<Employee> GetAll()
         {
             if (listEmployees == null) UpdateTable();
             return listEmployees;
@@ -22,7 +22,7 @@ namespace MIS.Controllers
             var tableEmployees = new EmployeeTableAdapter().GetData();
             listEmployees = ConvertTo(tableEmployees);
         }
-        public List<Employee> ConvertTo(DataTable datatable)
+        private List<Employee> ConvertTo(DataTable datatable)
         {
             return datatable.AsEnumerable().Select(m => new Employee(
                 id: m.Field<int>("Id"),

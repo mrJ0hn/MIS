@@ -56,6 +56,11 @@
         <Setter Property="BorderBrush" Value="#015c65"/>
         <Setter Property="FontSize" Value="15"/>
         <Setter Property="Height" Value="30"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding Text.Length, RelativeSource={RelativeSource Self}}" Value="0">
+                <Setter Property="CharacterCasing" Value="Upper"/>
+            </DataTrigger>
+        </Style.Triggers>
     </Style>
     <Style x:Key="Button" TargetType="Button">
         <Setter Property="BorderBrush" Value="#015c65"/>
