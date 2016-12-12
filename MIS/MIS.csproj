@@ -119,8 +119,11 @@
     <Compile Include="Pages\SchedulePage.xaml.cs">
       <DependentUpon>SchedulePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="СlientСardWindow.xaml.cs">
-      <DependentUpon>СlientСardWindow.xaml</DependentUpon>
+    <Compile Include="PriceWindow.xaml.cs">
+      <DependentUpon>PriceWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientCardWindow.xaml.cs">
+      <DependentUpon>ClientCardWindow.xaml</DependentUpon>
     </Compile>
     <Page Include="AddClientWindow.xaml">
       <SubType>Designer</SubType>
@@ -165,11 +168,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PriceWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ResourceDictionary.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="СlientСardWindow.xaml">
+    <Page Include="ClientCardWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -266,6 +273,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>DataBase.mdf</DependentUpon>
     </Content>
+    <Resource Include="Pictures\Delete.png" />
     <Resource Include="Pictures\Icon.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

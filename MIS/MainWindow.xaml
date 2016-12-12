@@ -44,7 +44,7 @@
                             <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonControl}"/>
                         </StackPanel>
                     </Button>
-                    <Button Style="{StaticResource LeftButtons}">
+                    <Button Style="{StaticResource LeftButtons}" Click="btnSettings_Click">
                         <StackPanel>
                             <Image Style="{StaticResource Image}" Source="Pictures/Settings.png"/>
                             <Label Style="{StaticResource LabelButton}" Content="{x:Static res:Resources.ButtonSettings}"/>

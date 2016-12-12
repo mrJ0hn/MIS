@@ -7,7 +7,7 @@
         xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
         xmlns:res="clr-namespace:MIS.Properties"
         mc:Ignorable="d"
-        Title="{x:Static res:Resources.ButtonAddClient}" Height="700" Width="800"
+        Title="{x:Static res:Resources.ButtonAddClient}" Height="700" Width="900"
         WindowStartupLocation="CenterScreen"
         WindowTitleBrush="#015c65"
         BorderThickness="2,0,2,2"
@@ -15,7 +15,7 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
             <ColumnDefinition Width="1.5*"/>
         </Grid.ColumnDefinitions>
         <!--<Grid.RowDefinitions>
